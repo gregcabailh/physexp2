@@ -47,7 +47,9 @@ jobs:
     #     name: book.pdf
     #     path: physexp2/_build/latex/book.pdf
     #     retention-days: 5
-
+html:
+  use_edit_page_button: false
+  
     # Deploy the book's HTML to gh-pages branch
     - name: GitHub Pages action
       uses: peaceiris/actions-gh-pages@v3.6.1
