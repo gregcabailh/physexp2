@@ -17,3 +17,6 @@ conda env create -f env.yaml --solver libmamba
 jupyter-book build physexp2/ # for html build
 jupyter-book build physexp2/ --builder pdflatex # for latex build
 ```
+
+Fork from Mathieu Guigue repository
+https://github.com/guiguem/physexp2
