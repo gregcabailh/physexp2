@@ -14,7 +14,8 @@ sphinx:
   config:
   #   hide_solutions: True
   #  nb_execution_mode: force
-    nb_execution_mode: auto
+  #  nb_execution_mode: auto
+    nb_execution_mode: off
     latex_elements:
       babel  : "\\usepackage[french]{babel}\n"
   extra_extensions:
