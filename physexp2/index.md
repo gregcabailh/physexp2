@@ -1,4 +1,5 @@
-# Physique Expérimentale 2: Introduction à l’analyse de données et aux statistiques pour la physique
+# Physique Expérimentale 2: 
+Introduction à l’analyse de données et aux statistiques pour la physique
 
 ## Contexte de cette UE
 
