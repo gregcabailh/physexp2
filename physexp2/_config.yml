@@ -13,7 +13,8 @@ logo                        : ""  # A path to the book logo
 sphinx:
   config:
   #   hide_solutions: True
-    nb_execution_mode: force
+  #  nb_execution_mode: force
+    nb_execution_mode: auto
     latex_elements:
       babel  : "\\usepackage[french]{babel}\n"
   extra_extensions:
