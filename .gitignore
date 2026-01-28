@@ -2,3 +2,5 @@ physexp2/_build
 */_build
 *.xml
 *.iml
+*.DS_Store
+*.pyc
