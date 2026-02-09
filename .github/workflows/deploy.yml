@@ -10,6 +10,9 @@ on:
 jobs:
   build-and-deploy-book:
     runs-on: ${{ matrix.os }}
+    permissions:
+      artifact-metadata: contents: read
+      issues: write
     strategy:
       matrix:
         os: [ubuntu-latest]
