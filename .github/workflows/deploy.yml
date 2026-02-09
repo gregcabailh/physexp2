@@ -62,6 +62,7 @@ jobs:
   
     # Deploy the book's HTML to gh-pages branch
     - name: GitHub Pages action
+      id: deployment
       uses: actions/deploy-pages@v4
       #peaceiris/actions-gh-pages@v3.6.1
       with:
