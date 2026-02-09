@@ -52,21 +52,21 @@ jobs:
     #   run: |
     #     $CONDA_PREFIX/bin/jupyter-book build physexp2 --builder=pdflatex
 
-    - name: Upload Artifact
-      uses: actions/upload-artifact@v4
-      with:
-        name: github-pages
-    #     name: book.pdf
-        path: physexp2/_build/html
-    #     retention-days: 5
+    # - name: Upload Artifact
+    #   uses: actions/upload-artifact@v4
+    #   with:
+    #     name: github-pages
+    # #     name: book.pdf
+    #     path: physexp2/_build/html
+    # #     retention-days: 5
   
     # Deploy the book's HTML to gh-pages branch
     - name: GitHub Pages action
-      id: deployment
-      uses: actions/deploy-pages@v4
-      #peaceiris/actions-gh-pages@v3.6.1
+    #  id: deployment
+    # uses: actions/deploy-pages@v4
+      uses: peaceiris/actions-gh-pages@v4
       with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./physexp2/_build/html
         #input: physexp2/_build/html
 
