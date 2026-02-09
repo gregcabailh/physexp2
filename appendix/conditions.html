@@ -180,7 +180,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chap2/loi-proba.html">
-     Loi de probabilité usuelles
+     Lois de probabilité usuelles
     </a>
    </li>
    <li class="toctree-l2">
@@ -532,7 +532,6 @@ Ces zones sont appelées périmètres (“scope” en anglais) et sont définies
 <p>Un point important est que les variables définies à l’intérieur d’un scope ne sont valables que dans ce scope et n’existent plus en dehors de ce scope.
 De la sorte, les variables définies directement dans le scope principal sont dites <em>gloables</em> et donc accessibles dans tous les scopes contenus dans le scope principal.
 Enfin, les scopes peuvent être insérés les uns dans les autres.</p>
-<p>(content:motsclés)=</p>
 </section>
 <section id="mots-cles-definissant-des-scopes">
 <h2>Mots-clés définissant des scopes<a class="headerlink" href="#mots-cles-definissant-des-scopes" title="Permalink to this headline">#</a></h2>
@@ -770,17 +769,17 @@ Element 9 a pour valeur: 1.0
   <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%.3f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">valeur</span><span class="p">)</span>
   <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
   <span class="n">valeur</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Valeur&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="s2">&quot;au dessus de 0.1:&quot;</span><span class="p">,</span> <span class="n">valeur</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Valeur&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="s2">&quot;au dessous de 0.1:&quot;</span><span class="p">,</span> <span class="n">valeur</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.929
-0.024
-0.337
-0.128
-0.920
-Valeur 6 au dessus de 0.1: 0.38856437214908013
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.727
+0.562
+0.436
+0.284
+0.728
+Valeur 6 au dessous de 0.1: 0.3390563605015925
 </pre></div>
 </div>
 </div>

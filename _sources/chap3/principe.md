@@ -7,4 +7,4 @@ Pour cela, on va se donner une fonction qui quantifie le désaccord entre les do
 
 A priori, il serait possible d'utiliser n'importe quelle fonction des données et des paramètres du modèle et tenter de la minimiser.
 Cependant certaines fonctions sont plus convenables puisqu'elles correspondent à des réalités probabilistes selon le type de données que l'on a.
-Parmi ces fonctions, on peut considérer la fonction $R^2$ pour des données dont nous n'avons pas estimé les erreurs (section [](content:fit-no-error)) et la plus connue fonction $\chi ^2$ (section [](content:fit-with-error)).
+Parmi ces fonctions, on peut considérer la fonction $R^2$ pour des données dont nous n'avons pas estimé les erreurs (section [](content:fit-no-error)) et la plus connue, la fonction $\chi ^2$ (section [](content:fit-with-error)).

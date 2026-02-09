@@ -180,7 +180,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chap2/loi-proba.html">
-     Loi de probabilité usuelles
+     Lois de probabilité usuelles
     </a>
    </li>
    <li class="toctree-l2">
@@ -639,7 +639,7 @@ Le tableau ci-dessous montre une partie des données météorologiques relevée 
 </tr>
 </tbody>
 </table>
-<p>Utilisé seulement des tables de données brutes pour extraire des comportements globaux (comme l’évolution de la pression durant la journée) est souvent très difficiles; il est alors utile de trouver des représentations des données brutes plus visuelles ou bien permettant de réduire la complexité en quelques nombres-clés.</p>
+<p>Utilisé seulement des tables de données brutes pour extraire des comportements globaux (comme l’évolution de la pression durant la journée) est souvent très difficile; il est alors utile de trouver des représentations des données brutes plus visuelles ou bien permettant de réduire la complexité en quelques nombres-clés.</p>
 <section id="representation-graphique">
 <h2>Représentation graphique<a class="headerlink" href="#representation-graphique" title="Permalink to this headline">#</a></h2>
 <p>Une première façon simple consiste à représenter des données sous forme de graphique.
@@ -687,7 +687,7 @@ Faisons une représentation temporelle des données.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fdae14c2a30&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7efbf892f130&gt;]
 </pre></div>
 </div>
 <img alt="../_images/caracterisation_representation_2_1.png" src="../_images/caracterisation_representation_2_1.png" />
@@ -713,7 +713,7 @@ Faisons une représentation temporelle des données.</p>
 </div>
 <p>Ce type de graphique permet de bien observer que, par exemple, lorsque la température diminue, l’humidité relative a tendance à augmenter et permet de mettre en évidence une <strong>corrélation</strong> entre ces deux quantités.</p>
 <p>Enfin une dernière représentation intéressante est l’<strong>histogramme</strong>.
-Pour construire un histogramme, on se donne une liste d’intervalles ou <strong>classes</strong> (en anglais, on parle souvent de <strong>bin</strong>.) couvrant toutes les valeurs mesurées et on va compter le nombre de fois que les valeurs issues de la mesure tombe dans un de ces intervalles.
+Pour construire un histogramme, on se donne une liste d’intervalles ou <strong>classes</strong> (en anglais, on parle souvent de <strong>bin</strong>) couvrant toutes les valeurs mesurées et on va compter le nombre de fois que les valeurs issues de la mesure tombe dans un de ces intervalles.
 Par exemple, si l’on s’intéresse à la température, on peut créer des intervalles de largeur <span class="math notranslate nohighlight">\(2^{\circ}\mathrm{C}\)</span> et ranger chaque valeur dans ces intervalles.
 Si on représente la quantité de mesures dans chaque intervalle, on obtient la figure ci-dessous.</p>
 <div class="cell tag_hide-input docutils container">
@@ -805,7 +805,7 @@ var(x) = \sigma ^2 = \frac{1}{n}\sum _i (x_i - \overline{x})^2.
 <p>La variance est la moyenne des écarts à la moyenne.
 Effectivement, il est parfois utile de la réécrire sous la forme:</p>
 <div class="math notranslate nohighlight">
-\[var(x) = = \frac{1}{n}\sum _i x_i ^2 + \frac{1}{n} \sum _i \overline{x}^2 - \frac{2}{n}\sum _i x_i \times \overline{x} = \frac{1}{n}\sum _i x_i ^2 - \frac{1}{n} \sum _i \overline{x}^2 = \overline{x^2} - \overline{x}^2.\]</div>
+\[var(x) = \frac{1}{n}\sum _i x_i ^2 + \frac{1}{n} \sum _i \overline{x}^2 - \frac{2}{n}\sum _i x_i \times \overline{x} = \frac{1}{n}\sum _i x_i ^2 - \frac{1}{n} \sum _i \overline{x}^2 = \overline{x^2} - \overline{x}^2.\]</div>
 <p>La racine carrée de la variance est appelée <strong>écart-type</strong> et notée souvent <span class="math notranslate nohighlight">\(\sigma\)</span>.
 L’écart-type caractérise la dispersion des valeurs de l’échantillon autour de la valeur moyenne et est fréquemment utilisé pour estimer une incertitude de mesure (nous y reviendrons dans le chapitre 2).
 Cette caractéristique s’applique bien à l’échantillon des températures.</p>
@@ -823,7 +823,7 @@ Cette caractéristique s’applique bien à l’échantillon des températures.<
 </div>
 <p>On peut aussi définir l’<strong>espace interquantile</strong> qui généralise la notion de médiane : les premier et troisième quantiles <span class="math notranslate nohighlight">\(q_1\)</span> et <span class="math notranslate nohighlight">\(q_3\)</span> définissent les valeurs qui définissent respectivement les premier et troisième quarts de l’échantillon ordonné.
 On a donc un quart des données plus petites que <span class="math notranslate nohighlight">\(q_1\)</span>, la moitié entre <span class="math notranslate nohighlight">\(q_1\)</span> et <span class="math notranslate nohighlight">\(q_3\)</span> et un dernier quart plus grandes que <span class="math notranslate nohighlight">\(q_3\)</span>: on définit donc <span class="math notranslate nohighlight">\(\delta q = q_3 - q_1\)</span> la distance interquantile: il s’agit bien d’une mesure de la dispersion des données (autour de la médiane cette fois-ci).
-On eput donc calculer les quantiles comme ci-dessous.</p>
+On p&amp;eut donc calculer les quantiles comme ci-dessous.</p>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">quantiles</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="n">temperatures</span><span class="p">,</span> <span class="p">[</span><span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.75</span><span class="p">])</span>
@@ -852,7 +852,7 @@ La distance interquantile vaut 8.32 C
 <p>On peut alors définir le <strong>coefficient de corrélation</strong> <span class="math notranslate nohighlight">\(\rho\)</span> tel que:</p>
 <div class="math notranslate nohighlight">
 \[\rho = \frac{cov(x,y)}{\sigma_x\sigma_y}.\]</div>
-<p>Ce nombre compris entre -1 et 1 définit le niveau de corrélation entre les deux grandeurs <span class="math notranslate nohighlight">\(x\)</span> et <span class="math notranslate nohighlight">\(y\)</span>: un échantillon est entièrement corrélé si <span class="math notranslate nohighlight">\(\rho = 1\)</span>, entièrement décorrélé si <span class="math notranslate nohighlight">\(\rho = -1\)</span> et décorrélé si <span class="math notranslate nohighlight">\(\rho = 0\)</span>.</p>
+<p>Ce nombre compris entre -1 et 1 définit le niveau de corrélation entre les deux grandeurs <span class="math notranslate nohighlight">\(x\)</span> et <span class="math notranslate nohighlight">\(y\)</span>: un échantillon est entièrement corrélé si <span class="math notranslate nohighlight">\(\rho = 1\)</span>, anti-corrélé si <span class="math notranslate nohighlight">\(\rho = -1\)</span> et décorrélé si <span class="math notranslate nohighlight">\(\rho = 0\)</span>.</p>
 <p>Par exemple, on peut calculer le coefficient de corrélation entre la température et l’humidité relative de la semaine 38 de 2020.</p>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
@@ -1011,18 +1011,18 @@ Corrélation=-0.32
 <section id="exercise-content">
 <p>Maintenant nous allons essayer de calculer la moyenne et la variance de l’échantillon en utilisant les données représentées par un histogramme.
 Notamment on peut calculer la moyenne de l’échantillon par la relation:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4caeea8f-158c-4a85-8b52-40c9e0ac0b36">
-<span class="eqno">(15)<a class="headerlink" href="#equation-4caeea8f-158c-4a85-8b52-40c9e0ac0b36" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-8ee86f5a-4454-4ab7-9b8f-425bfb046ac1">
+<span class="eqno">(15)<a class="headerlink" href="#equation-8ee86f5a-4454-4ab7-9b8f-425bfb046ac1" title="Permalink to this equation">#</a></span>\[\begin{equation}
     m = \sum _{i=0}^k f_i \frac{I_i + I_{i+1}}{2},
 \end{equation}\]</div>
 <p>avec <span class="math notranslate nohighlight">\(I_i\)</span> la bordure du bin <span class="math notranslate nohighlight">\(i\)</span> (<span class="math notranslate nohighlight">\(I_i\)</span> est la borne inférieure du bin <span class="math notranslate nohighlight">\(i\)</span> et <span class="math notranslate nohighlight">\(I_{i+1}\)</span> la borne supérieure du bin i) et <span class="math notranslate nohighlight">\(f_i\)</span> la fréquence du bin <span class="math notranslate nohighlight">\(i\)</span>.
 On prend <span class="math notranslate nohighlight">\(\frac{I_i + I_{i+1}}{2}\)</span> qui correspond au centre du bin <span class="math notranslate nohighlight">\(i\)</span>.
 De manière similaire, la variance se calcule grâce à la relation:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-50207bb3-de6c-4923-81f2-862ebdcfe636">
-<span class="eqno">(16)<a class="headerlink" href="#equation-50207bb3-de6c-4923-81f2-862ebdcfe636" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-2fd08e37-d5ad-4365-a680-400a46d24594">
+<span class="eqno">(16)<a class="headerlink" href="#equation-2fd08e37-d5ad-4365-a680-400a46d24594" title="Permalink to this equation">#</a></span>\[\begin{equation}
     v = \sum _{i=0}^k f_i \left ( \frac{I_i + I_{i+1}}{2} - m\right) ^2.
 \end{equation}\]</div>
-<p>Lorsqu’on trace un histogramme avec ```matplotlib par exemple en utilisant:</p>
+<p>Lorsqu’on trace un histogramme avec <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> par exemple en utilisant:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">axs</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">pression</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;pression&quot;</span><span class="p">)</span>
 </pre></div>
 </div>

@@ -180,7 +180,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chap2/loi-proba.html">
-     Loi de probabilité usuelles
+     Lois de probabilité usuelles
     </a>
    </li>
    <li class="toctree-l2">
@@ -515,7 +515,7 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="ajustement-avec-des-donnees-avec-erreurs">
 <span id="content-fit-with-error"></span><h1>Ajustement avec des données avec erreurs<a class="headerlink" href="#ajustement-avec-des-donnees-avec-erreurs" title="Permalink to this headline">#</a></h1>
-<p>La minimisation du coefficient de détermination <span class="math notranslate nohighlight">\(R^2\)</span> défini de façon \textit{ad hoc} permet d’estimer la valeur des paramètres d’un modèle à partir d’un jeu de données.
+<p>La minimisation du coefficient de détermination <span class="math notranslate nohighlight">\(R^2\)</span> défini de façon <em>ad hoc</em> permet d’estimer la valeur des paramètres d’un modèle à partir d’un jeu de données.
 Nous allons présenter ici d’autres quantités ayant des motivations probabilistes, notamment lorsque l’on peut associer à chaque mesure une erreur.</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="vraisemblance-et-moindre-carres">
@@ -659,8 +659,8 @@ Ecart-type = 2.402
 <h2>Extraction des meilleurs paramètres<a class="headerlink" href="#extraction-des-meilleurs-parametres" title="Permalink to this headline">#</a></h2>
 <p>Trouver les meilleurs paramètres d’un modèle selon les données collectées revient à maximiser la vraisemblance ou bien minimiser le <span class="math notranslate nohighlight">\(\chi ^2\)</span>.
 Cela peut se faire numériquement, par exemple, avec le module <code class="docutils literal notranslate"><span class="pre">scipy.optimize</span></code> ou bien analytiquement: en généralisant pour des paramètres <span class="math notranslate nohighlight">\(\vec{\theta}\)</span>, le système d’équations à résoudre est\footnote{Pour que ces paramètres minimisent bien le <span class="math notranslate nohighlight">\(\chi^2\)</span>, il faut aussi vérifier que <span class="math notranslate nohighlight">\(\left.\frac{\partial^2 \chi ^2}{\partial \vec{\theta}^2}\right\vert_{\vec{\theta}=\hat{\vec{\theta}}} &gt; 0\)</span>.}:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ed312066-edfa-4398-9197-e4f7fc80d2a9">
-<span class="eqno">(73)<a class="headerlink" href="#equation-ed312066-edfa-4398-9197-e4f7fc80d2a9" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-c721aef3-fb79-4e66-a475-90bf6e4f2583">
+<span class="eqno">(73)<a class="headerlink" href="#equation-c721aef3-fb79-4e66-a475-90bf6e4f2583" title="Permalink to this equation">#</a></span>\[\begin{equation}
   \left.\frac{\partial \chi ^2}{\partial \vec{\theta}}\right\vert_{\vec{\theta}=\hat{\vec{\theta}}} = 0.
 \end{equation}\]</div>
 <!-- % Pour certains modèles, il est possible de trouver une expression analytique des meilleurs paramètres utilisant les valeurs des données. -->
@@ -701,7 +701,7 @@ Cela peut se faire numériquement, par exemple, avec le module <code class="docu
 <li><p>les relations analytiques <a class="reference internal" href="#equation-solana-lineaire">(74)</a>.</p></li>
 </ul>
 <p>On peut voir que les résultats trouvés par les trois méthodes sont proches (ce qui est rassurant).
-En revanche, les paramètres sont différents que ceux trouvés par la méthode sans erreur du premier exemple .
+En revanche, les paramètres sont différents que ceux trouvés par la méthode sans erreur du premier exemple.
 Cela est du au fait que les points de données n’ont pas la même erreur, et donc le même poids.</p>
 </div>
 <div class="cell tag_hide-input docutils container">
@@ -755,11 +755,16 @@ Cela est du au fait que les points de données n’ont pas la même erreur, et d
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/fit-avec-erreur_3_0.png" src="../_images/fit-avec-erreur_3_0.png" />
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Résultats:
-Curve fit: a = 0.27; b = 0.97
-QExPy: a = 0.27; b = 0.97
-Analytique: a = 0.27; b = 0.97
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">10</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">curve_fit</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">qexpy</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">qexpy.plotting</span> <span class="k">as</span> <span class="nn">qplt</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">,</span> <span class="mf">6.0</span><span class="p">,</span> <span class="mf">7.0</span><span class="p">,</span> <span class="mf">8.0</span><span class="p">,</span> <span class="mf">9.0</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">])</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;qexpy&#39;
 </pre></div>
 </div>
 </div>
@@ -768,10 +773,27 @@ Analytique: a = 0.27; b = 0.97
 </section>
 <section id="extraction-de-lerreur-sur-un-parametre">
 <h2>Extraction de l’erreur sur un paramètre<a class="headerlink" href="#extraction-de-lerreur-sur-un-parametre" title="Permalink to this headline">#</a></h2>
+<p>Lorsqu’on ajuste un modèle à des données expérimentales, il ne suffit pas de déterminer les <strong>meilleurs paramètres</strong> (ceux qui minimisent le <span class="math notranslate nohighlight">\(\chi^2\)</span>). Il est tout aussi important d’estimer les <strong>intervalles de confiance</strong> associés à ces paramètres. Ces intervalles indiquent la plage de valeurs dans laquelle le paramètre a une certaine probabilité de se trouver, en tenant compte des incertitudes expérimentales.</p>
 <p>L’erreur sur un paramètre est défini en terme de probabilité d’obtenir la vraie valeur à partir des données mesurées: il faut intégrer la fonction de vraisemblance sur l’intervalle de confiance définie par la valeur moyenne <span class="math notranslate nohighlight">\(\theta\)</span> et l’erreur <span class="math notranslate nohighlight">\(\sigma_{\theta}\)</span> sur les paramètres <span class="math notranslate nohighlight">\(\left[\theta-\sigma_{\theta},\theta+\sigma_{\theta}\right]\)</span>.
-En général, c’est un travail très complexe car la fonction de vraisemblance peut contenir des densité de probabilité complexe à écrire et intégrer; de plus, le nombre de dimensions à intégrer est égal au nombre de paramètres du modèle, rendant le calcul impraticable lorsque le nombre de paramètres est très grand.</p>
-<p>Cependant, pour des modèles simples comme des modèles linéaires avec des distributions gaussiennes des données, il est possible de calculer les erreurs sur les paramètres en utilisant le <span class="math notranslate nohighlight">\(\chi ^2\)</span> <a class="reference internal" href="#equation-def-chi2">(72)</a>.
-Dans le cas simple d’un ajustement linéaire <span class="math notranslate nohighlight">\(y=ax+b\)</span>, les erreurs sur les paramètres <span class="math notranslate nohighlight">\(a\)</span> et <span class="math notranslate nohighlight">\(b\)</span> sont définis par:</p>
+En général, c’est un travail très complexe car la fonction de vraisemblance peut contenir des densité de probabilité complexe à écrire et intégrer; de plus, le nombre de dimensions à intégrer est égal au nombre de paramètres du modèle, rendant le calcul impraticable lorsque le nombre de paramètres est très grand. Cependant, pour des modèles simples comme des modèles linéaires avec des distributions gaussiennes des données, il est possible de calculer les erreurs sur les paramètres en utilisant le <span class="math notranslate nohighlight">\(\chi ^2\)</span> <a class="reference internal" href="#equation-def-chi2">(72)</a>.</p>
+<p><strong>Définition des intervalles de confiance :</strong>
+Pour estimer l’erreur sur un paramètre <span class="math notranslate nohighlight">\(\theta\)</span> (par exemple, la pente <span class="math notranslate nohighlight">\(a\)</span> ou l’ordonnée à l’origine <span class="math notranslate nohighlight">\(b\)</span>), on utilise la <strong>différence de <span class="math notranslate nohighlight">\(\chi^2\)</span></strong> par rapport à sa valeur minimale :</p>
+<p><span class="math notranslate nohighlight">\(\Delta \chi^2 = \chi^2(\theta) - \chi^2_{\text{min}}\)</span></p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\chi^2_{\text{min}}\)</span> est la valeur minimale de <span class="math notranslate nohighlight">\(\chi^2\)</span> obtenue avec les paramètres optimaux <span class="math notranslate nohighlight">\(\tilde{\theta}\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\chi^2(\theta)\)</span> est la valeur de <span class="math notranslate nohighlight">\(\chi^2\)</span> calculée pour une valeur donnée de <span class="math notranslate nohighlight">\(\theta\)</span>, en gardant les autres paramètres fixes.</p></li>
+</ul>
+<p>Pour un <strong>niveau de confiance <span class="math notranslate nohighlight">\((1 - \alpha) \)</span></strong>, l’intervalle de confiance est défini par : <span class="math notranslate nohighlight">\(\Delta \chi^2 \leq -2 \ln(1 - \alpha)\)</span></p>
+<p>Cette relation provient de la distribution du <span class="math notranslate nohighlight">\(\chi^2\)</span> à 1 degré de liberté. Le terme <span class="math notranslate nohighlight">\(-2 \ln(1 - \alpha)\)</span> représente le <strong>quantile</strong> de cette distribution pour le niveau de confiance <span class="math notranslate nohighlight">\((1 - \alpha)\)</span>.</p>
+<p><strong>Lien avec la distribution gaussienne</strong></p>
+<p>Pour une <strong>distribution gaussienne</strong>, l’intervalle de confiance à <strong>68,3%</strong> correspond à un écart de <strong><span class="math notranslate nohighlight">\(\pm 1\sigma\)</span></strong> autour de la moyenne. Cela signifie que, si un paramètre suit une distribution gaussienne, il y a <strong>68,3% de chances</strong> que sa vraie valeur se situe dans l’intervalle <span class="math notranslate nohighlight">\([ \mu - \sigma, \mu + \sigma ]\)</span>, où :</p>
+<ul class="simple">
+<li><p><strong><span class="math notranslate nohighlight">\(\mu\)</span></strong> est la moyenne (ou la valeur optimale du paramètre),</p></li>
+<li><p><strong><span class="math notranslate nohighlight">\(\sigma\)</span></strong> est l’écart-type (ou l’erreur standard sur le paramètre).</p></li>
+</ul>
+<p>Dans le contexte de l’ajustement de modèles, lorsque les données suivent une distribution gaussienne et que les erreurs sont bien estimées, l’intervalle de confiance à 68,3% obtenu via la méthode du <span class="math notranslate nohighlight">\(\chi^2\)</span> avec <span class="math notranslate nohighlight">\(-2 \ln(1 - \alpha) \approx 1.0\)</span> est <strong>équivalent</strong> à l’intervalle ±1σ. Cela permet de relier directement la méthode du <span class="math notranslate nohighlight">\(\chi^2\)</span> aux concepts classiques de la statistique gaussienne.</p>
+<p><strong>Application aux paramètres d’un ajustement linéaire</strong></p>
+<p>Dans le cas simple d’un ajustement linéaire <span class="math notranslate nohighlight">\(y=ax+b\)</span>, les erreurs sur les paramètres <span class="math notranslate nohighlight">\(a\)</span> et <span class="math notranslate nohighlight">\(b\)</span> sont définis par:</p>
 <div class="math notranslate nohighlight" id="equation-err-a">
 <span class="eqno">(76)<a class="headerlink" href="#equation-err-a" title="Permalink to this equation">#</a></span>\[
 \Delta a \,\mathrm{tel\,que\,}\, \chi^{2}(a+\Delta a, \hat{b})=\chi^{2}(a-\Delta a, \hat{b})=\chi_{\min }^{2}-2 \ln (1-\alpha),
@@ -820,18 +842,16 @@ Graphiquement, on peut construire ces intervalles comme sur la figure ci-dessous
 <p>Ces erreurs valent:</p>
 <div class="math notranslate nohighlight" id="equation-error-linearfit-a">
 <span class="eqno">(77)<a class="headerlink" href="#equation-error-linearfit-a" title="Permalink to this equation">#</a></span>\[
-    \Delta a=\frac{\sqrt{-2 \ln (1-\alpha)}}{\sqrt{B}}=\frac{\sqrt{-2 \ln (1-\alpha)}}{\sqrt{\sum \frac{x_{1}^{2}}{\left(\Delta y_{1}\right)^{2}}}},
+    \Delta a=\frac{\sqrt{-2 \ln (1-\alpha)}}{\sqrt{B}}\approx \frac{1}{\sqrt{B}}=\frac{1}{\sqrt{\sum \frac{x_{1}^{2}}{\left(\Delta y_{1}\right)^{2}}}},
 \]</div>
 <div class="math notranslate nohighlight" id="equation-error-linearfit-b">
 <span class="eqno">(78)<a class="headerlink" href="#equation-error-linearfit-b" title="Permalink to this equation">#</a></span>\[ 
-    \Delta b=\frac{\sqrt{-2 \ln (1-\alpha)}}{\sqrt{E}}=\frac{\sqrt{-2 \ln (1-\alpha)}}{\sqrt{\sum \frac{1}{\left(\Delta y_{i}\right)^{2}}}}.
+    \Delta b=\frac{\sqrt{-2 \ln (1-\alpha)}}{\sqrt{E}}\approx \frac{1}{\sqrt{E}}=\frac{1}{\sqrt{\sum \frac{1}{\left(\Delta y_{i}\right)^{2}}}}.
 \]</div>
-<p>Le terme <span class="math notranslate nohighlight">\(\sqrt{-2 \ln (1-\alpha)}\)</span> vaut:</p>
-<ul class="simple">
-<li><p>pour une erreur définie “à un sigma”, <span class="math notranslate nohighlight">\(\alpha=68.3~\%\)</span>, alors <span class="math notranslate nohighlight">\(\sqrt{-2 \ln (1-\alpha)} = 1.52\)</span>,</p></li>
-<li><p>pour une erreur définie “à deux sigmas”, <span class="math notranslate nohighlight">\(\alpha=95.4~\%\)</span>, alors <span class="math notranslate nohighlight">\(\sqrt{-2 \ln (1-\alpha)} = 2.49\)</span>,</p></li>
-<li><p>pour une erreur définie “à trois sigmas”, <span class="math notranslate nohighlight">\(\alpha=99.7~\%\)</span>, alors <span class="math notranslate nohighlight">\(\sqrt{-2 \ln (1-\alpha)} = 3.44\)</span>.</p></li>
-</ul>
+<!-- # Le terme $\sqrt{-2 \ln (1-\alpha)}$ vaut: -->
+<!-- # - pour une erreur définie "à un sigma", $\alpha=68.3~\%$, alors $\sqrt{-2 \ln (1-\alpha)} = 1.52$, -->
+<!-- # - pour une erreur définie "à deux sigmas", $\alpha=95.4~\%$, alors $\sqrt{-2 \ln (1-\alpha)} = 2.49$, -->
+<!-- # - pour une erreur définie "à trois sigmas", $\alpha=99.7~\%$, alors $\sqrt{-2 \ln (1-\alpha)} = 3.44$. -->
 <!-- % Dans de distributions de données gaussiennes, les erreurs sur les paramètres du modèle sont estimées par la dérivée de la fonction de vraisemblance \ref{eq:likelihood-gaussien} (et par conséquent au $\chi ^2$ \ref{eq:def-chi2}):
 % \begin{equation}
 %     \sigma _{\theta}^2 = \frac{1}{\left(\frac{\partial \ln \mathcal{L}}{\partial \theta}\right)^2}= \frac{-1}{\frac{\partial ^2 \ln \mathcal{L}}{\partial \theta^2}} = \frac{1}{\frac{1}{2}\frac{\partial ^2 \chi ^2}{\partial \theta ^2}} .
@@ -882,14 +902,14 @@ Il est donc important de toujours comparer le résultat et notamment les erreurs
 <span id="content-chi2-histo"></span><h2>Ajustement d’un histogramme<a class="headerlink" href="#ajustement-dun-histogramme" title="Permalink to this headline">#</a></h2>
 <p>Lorsque les données suivant une certaine loi de probabilité <span class="math notranslate nohighlight">\(f(x;\vec{\theta})\)</span> sont rangées dans un histogramme, il est possible d’estimer les paramètres de cette densité de probabilité.
 Pour cela on construit la fonction de vraisemblance <a class="reference internal" href="#equation-vraisemblance">(70)</a> en supposant que le contenu de chaque classe <span class="math notranslate nohighlight">\(N_i\)</span> est distribué selon une loi poissonienne autour de la valeur vraie <span class="math notranslate nohighlight">\(f(x_i;\vec{\theta})\times \delta x\)</span> où <span class="math notranslate nohighlight">\(x_i\)</span> représente le centre de la classe et <span class="math notranslate nohighlight">\(\delta x\)</span> la largeur de la classe: on a alors</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f63c6292-3978-460c-833b-62d74a42f85c">
-<span class="eqno">(79)<a class="headerlink" href="#equation-f63c6292-3978-460c-833b-62d74a42f85c" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-8c140760-ee78-4d64-9a71-5e7c7a637b35">
+<span class="eqno">(79)<a class="headerlink" href="#equation-8c140760-ee78-4d64-9a71-5e7c7a637b35" title="Permalink to this equation">#</a></span>\[\begin{equation}
   \mathcal{L}(\vec{\theta}) = \prod _i \frac{e^{-f(x_i;\vec{\theta}) \delta x}\left(f(x_i;\vec{\theta}) \delta x\right)^{N_i}}{N_i !}.
 \end{equation}\]</div>
 <p>Dans le cas où le nombre de coups dans chaque classe est grand (<span class="math notranslate nohighlight">\(N_i&gt;25\)</span>), on peut faire l’approximation de la densité de Poisson par une loi normale d’écart type <span class="math notranslate nohighlight">\(\sigma _i = \sqrt{N_i}\)</span>.
 La maximisation de la fonction de vraisemblance est alors la minimisation du <span class="math notranslate nohighlight">\(\chi ^2\)</span>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9d40aa4d-e806-4c82-a2f4-1feda1802853">
-<span class="eqno">(80)<a class="headerlink" href="#equation-9d40aa4d-e806-4c82-a2f4-1feda1802853" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-fa551e8b-94fd-4a44-ad85-b040093e7ca3">
+<span class="eqno">(80)<a class="headerlink" href="#equation-fa551e8b-94fd-4a44-ad85-b040093e7ca3" title="Permalink to this equation">#</a></span>\[\begin{equation}
     \chi ^2 = \sum _i\frac{\left(N_i - f(x_i;\vec{\theta})\delta x\right)^2}{N_i}.
 \end{equation}\]</div>
 <hr class="footnotes docutils" />
