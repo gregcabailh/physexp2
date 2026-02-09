@@ -13,6 +13,10 @@ jobs:
     permissions:
       id-token: write
       pages: write
+    # Deploy to the github-pages environment
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     strategy:
       matrix:
         os: [ubuntu-latest]
@@ -62,5 +66,6 @@ jobs:
       #peaceiris/actions-gh-pages@v3.6.1
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
+
         #input: physexp2/_build/html
 
