@@ -12,7 +12,12 @@ jobs:
     runs-on: ${{ matrix.os }}
     permissions:
       id-token: write
+      actions: write
       pages: write
+      contents: write
+      issues: write
+      deployments: write
+      pull-requests: write
     # Deploy to the github-pages environment
     environment:
       name: github-pages
