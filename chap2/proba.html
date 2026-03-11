@@ -542,7 +542,7 @@ On peut alors définir la probabilité <span class="math notranslate nohighlight
 <span class="eqno">(17)<a class="headerlink" href="#equation-proba-discrete" title="Permalink to this equation">#</a></span>\[    
 p(n) = P(N=n). 
 \]</div>
-<p>L’axiome \eqref{eq:axiome-2} donne que la somme de toutes les probabilités de chaque valeur <span class="math notranslate nohighlight">\(n_i\)</span> vaut 1:</p>
+<p>L’axiome <a class="reference internal" href="../chap1/ensemble.html#equation-axiome-2">(2)</a> donne que la somme de toutes les probabilités de chaque valeur <span class="math notranslate nohighlight">\(n_i\)</span> vaut 1:</p>
 <div class="math notranslate nohighlight">
 \[    \sum _{i=1}^{\infty} p(n_i) = 1. \]</div>
 <p>On peut ordonner les nombres dans l’ensemble <span class="math notranslate nohighlight">\(\Omega\)</span>: <span class="math notranslate nohighlight">\(n_1 &lt; n_2 &lt; n_3 &lt; ...\)</span>.
@@ -573,7 +573,7 @@ On peut notamment définir la probabilité pour que le résultat <span class="ma
 <span class="eqno">(18)<a class="headerlink" href="#equation-def-pdf" title="Permalink to this equation">#</a></span>\[
 f(x) = \frac{\mathrm{d}F(x)}{\mathrm{d}x}.
 \]</div>
-<p>La figure ci-dessous montre un exemple de pdf et de la fonction de répartition associée.</p>
+<p>Le graphique ci-dessous montre un exemple de pdf et de la fonction de répartition associée.</p>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> <span class="c1"># importer maplotlib</span>
@@ -632,7 +632,7 @@ Que vaut la distribution <span class="math notranslate nohighlight">\(g\)</span>
 \[
 g(y) = \frac{f(x)}{\vert \frac{1}{2\sqrt{x}} \vert} = 2y\exp (-y^2).
 \]</div>
-<p>La figure ci-dessous représente les pdf <span class="math notranslate nohighlight">\(f(x)\)</span> et <span class="math notranslate nohighlight">\(g(y)\)</span>.</p>
+<p>Le graphique ci-dessous représente les pdf <span class="math notranslate nohighlight">\(f(x)\)</span> et <span class="math notranslate nohighlight">\(g(y)\)</span>.</p>
 </div>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
@@ -666,9 +666,9 @@ g(y) = \sum _i \frac{f(x)}{\vert \phi_i ' (x)\vert} = \sum _i \frac{f(\phi ^{-1}
 
 <p class="admonition-title"><span class="caption-number">Exercise 5 </span></p>
 <section id="exercise-content">
-<p>En utilisant une distribution de nombres aléatoires distribués uniformément, on veut produire une distribution de loi sinusoidale:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-515b7758-99ed-4e92-b6f3-4741d895cae9">
-<span class="eqno">(20)<a class="headerlink" href="#equation-515b7758-99ed-4e92-b6f3-4741d895cae9" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<p>En utilisant une distribution de nombres aléatoires distribués uniformément, on veut produire une distribution de loi sinusoïdale:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-9fed181b-b3c1-4f45-9224-d905b4a94d20">
+<span class="eqno">(20)<a class="headerlink" href="#equation-9fed181b-b3c1-4f45-9224-d905b4a94d20" title="Permalink to this equation">#</a></span>\[\begin{equation}
     f(x) = \frac{1}{2}\sin(x).
 \end{equation}\]</div>
 <p>On choisira un intervalle compris entre 0 et <span class="math notranslate nohighlight">\(\pi\)</span>.</p>
@@ -685,13 +685,10 @@ g(y) = \sum _i \frac{f(x)}{\vert \phi_i ' (x)\vert} = \sum _i \frac{f(\phi ^{-1}
 <p class="admonition-title">Solution to<a class="reference internal" href="#proba-cos"> Exercise 5</a></p>
 <section id="solution-content">
 <ol>
-<li><p>On calcule
-$<span class="math notranslate nohighlight">\(
-\int _0 ^{\pi} f(x)\mathrm{d}x = \frac{1}{2} \int _0 ^{\pi} \sin(x)\mathrm{d}x = \frac{1}{2} \left[ -\cos(\pi) + \cos(0) \right] = 1
-\)</span>$</p></li>
+<li><p>On calcule <span class="math notranslate nohighlight">\(\int _0 ^{\pi} f(x)\mathrm{d}x = \frac{1}{2} \int _0 ^{\pi} \sin(x)\mathrm{d}x = \frac{1}{2} \left[ -\cos(\pi) + \cos(0) \right] = 1\)</span></p></li>
 <li><p>Le calcul est direct:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9dfff0cc-aa82-4754-aca4-d4467e8462a5">
-<span class="eqno">(21)<a class="headerlink" href="#equation-9dfff0cc-aa82-4754-aca4-d4467e8462a5" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-a68525e6-6e08-4383-9d24-58fd34195049">
+<span class="eqno">(21)<a class="headerlink" href="#equation-a68525e6-6e08-4383-9d24-58fd34195049" title="Permalink to this equation">#</a></span>\[\begin{equation}
         F(x) = \int _0 ^x \frac{1}{2}\sin (x')\mathrm{d}x' = \left[ -\frac{1}{2}\cos (x') \right]_0 ^x = \frac{1}{2}-\frac{1}{2}\cos(x).
     \end{equation}\]</div>
 </li>
@@ -699,19 +696,18 @@ $<span class="math notranslate nohighlight">\(
 La fonction <span class="math notranslate nohighlight">\(F\)</span> est définie pour <span class="math notranslate nohighlight">\(x\in \left[-1, 1\right]\)</span>.</p></li>
 <li><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> <span class="c1"># importer maplotlib</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">acos</span><span class="p">,</span> <span class="n">sin</span><span class="p">,</span> <span class="n">pi</span>
 
 <span class="n">nevents</span> <span class="o">=</span> <span class="mi">10000</span>
-<span class="n">unif</span> <span class="o">=</span> <span class="p">[</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">()</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">nevents</span><span class="p">)</span> <span class="p">]</span> <span class="c1"># liste d&#39;abscisses de la figure</span>
-<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="n">acos</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">val</span><span class="p">)</span> <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">unif</span><span class="p">]</span>                          <span class="c1"># calcul de y = f(x)</span>
+<span class="n">unif</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span> <span class="n">nevents</span> <span class="p">)</span>        <span class="c1"># nombres aléa. uniformes sur [0,1]</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">acos</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">unif</span><span class="p">)</span>                   <span class="c1"># nombres distribués selon f</span>
 
-<span class="n">xx</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="o">*</span><span class="mf">0.01</span><span class="o">*</span><span class="mf">3.14159</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">101</span><span class="p">)]</span>
-<span class="n">yy</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="o">*</span><span class="n">sin</span><span class="p">(</span><span class="n">val</span><span class="p">)</span> <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">xx</span><span class="p">]</span>
+<span class="n">xx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">,</span> <span class="mi">101</span><span class="p">)</span>            <span class="c1"># liste d&#39;abscisses</span>
+<span class="n">yy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">xx</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>                                 <span class="c1"># calcul de f(x)</span>
 
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span> <span class="c1"># creation d&#39;un plot</span>
-<span class="n">n</span><span class="p">,</span> <span class="n">bins</span><span class="p">,</span> <span class="n">patches</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.75</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Gen. f(x)&quot;</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xx</span><span class="p">,</span><span class="n">yy</span><span class="p">,</span><span class="s2">&quot;-&quot;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;f(x) = sin(x)/2&quot;</span><span class="p">)</span> <span class="c1"># plot de y1 vs x</span>
-<span class="n">leg</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>   <span class="c1"># creation de la légende</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>                          <span class="c1"># creation d&#39;un graphique</span>
+<span class="n">n</span><span class="p">,</span> <span class="n">bins</span><span class="p">,</span> <span class="n">bars</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Gen. f(x)&quot;</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xx</span><span class="p">,</span><span class="n">yy</span><span class="p">,</span><span class="s2">&quot;-&quot;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;f(x) = sin(x)/2&quot;</span><span class="p">)</span>                  <span class="c1"># courbe y1(x)</span>
+<span class="n">leg</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>                                 <span class="c1"># creation de la légende</span>
 </pre></div>
 </div>
 </li>
@@ -720,7 +716,24 @@ La fonction <span class="math notranslate nohighlight">\(F\)</span> est définie
 </div>
 <div class="cell tag_hide-output tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<img alt="../_images/proba_6_0.png" src="../_images/proba_6_0.png" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">6</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">nevents</span> <span class="o">=</span> <span class="mi">10000</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">unif</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span> <span class="n">nevents</span><span class="p">)</span>    <span class="c1"># nombres uniformes sur [0,1]</span>
+<span class="ne">----&gt; </span><span class="mi">6</span> <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">acos</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">unif</span><span class="p">)</span>                          <span class="c1"># calcul de y = f(x)</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="n">xx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">,</span> <span class="mi">101</span><span class="p">)</span> <span class="c1"># les abscisses</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="n">yy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">xx</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>                      <span class="c1"># calcul de f(x)</span>
+
+<span class="nn">File /usr/share/miniconda/envs/physexp2_notebook/lib/python3.8/site-packages/numpy/__init__.py:320,</span> in <span class="ni">__getattr__</span><span class="nt">(attr)</span>
+<span class="g g-Whitespace">    </span><span class="mi">317</span>     <span class="kn">from</span> <span class="nn">.testing</span> <span class="kn">import</span> <span class="n">Tester</span>
+<span class="g g-Whitespace">    </span><span class="mi">318</span>     <span class="k">return</span> <span class="n">Tester</span>
+<span class="ne">--&gt; </span><span class="mi">320</span> <span class="k">raise</span> <span class="ne">AttributeError</span><span class="p">(</span><span class="s2">&quot;module </span><span class="si">{!r}</span><span class="s2"> has no attribute &quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">321</span>                      <span class="s2">&quot;</span><span class="si">{!r}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="vm">__name__</span><span class="p">,</span> <span class="n">attr</span><span class="p">))</span>
+
+<span class="ne">AttributeError</span>: module &#39;numpy&#39; has no attribute &#39;acos&#39;
+</pre></div>
+</div>
 </div>
 </div>
 </section>
@@ -736,8 +749,8 @@ En utilisant l’équation <a class="reference internal" href="#equation-chgt-va
 \]</div>
 <p>On peut démontrer que la fonction <span class="math notranslate nohighlight">\(\phi (x) = G^{-1}(x)\)</span> est une solution de l’équation précédente.
 En effet, si <span class="math notranslate nohighlight">\(G\)</span> est une fonction strictement croissante, elle est bijective; alors:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-89076bb2-b288-47b8-b8b1-3dc025075d38">
-<span class="eqno">(23)<a class="headerlink" href="#equation-89076bb2-b288-47b8-b8b1-3dc025075d38" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-6d0860e7-5ac0-4e8c-a9ca-cf40456fabc7">
+<span class="eqno">(23)<a class="headerlink" href="#equation-6d0860e7-5ac0-4e8c-a9ca-cf40456fabc7" title="Permalink to this equation">#</a></span>\[\begin{equation}
     1 = \frac{\mathrm{d}x}{\mathrm{d}x} = \frac{\mathrm{d}\phi^{-1} (y)}{\mathrm{d}x} = \frac{\mathrm{d}G (y)}{\mathrm{d}y} \frac{\mathrm{d}y}{\mathrm{d}x} = \frac{\mathrm{d}G (y)}{\mathrm{d}y} \frac{\mathrm{d}\phi(x)}{\mathrm{d}x},
 \end{equation}\]</div>
 <p>ce qui correspond à l’équation <a class="reference internal" href="#equation-generation-loi">(22)</a>.</p>
@@ -746,12 +759,12 @@ En effet, si <span class="math notranslate nohighlight">\(G\)</span> est une fon
 <p class="admonition-title">Exemple</p>
 <p>On souhaite générer aléatoirement des nombres selon la distribution <span class="math notranslate nohighlight">\(f(x) = 3x^2\)</span> sur l’intervalle <span class="math notranslate nohighlight">\(\left[0,1\right]\)</span> à partir d’une loi uniforme (générée par exemple à partir de la fonction <code class="docutils literal notranslate"><span class="pre">numpy.random.rand()</span></code>).</p>
 <p>On commence par vérifier que la pdf <span class="math notranslate nohighlight">\(f\)</span> est bien normalisée:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-24f23480-a12e-4908-99ab-2e11049a2812">
-<span class="eqno">(24)<a class="headerlink" href="#equation-24f23480-a12e-4908-99ab-2e11049a2812" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-f7e9bbe3-3c0b-486a-aaba-8014c54af63c">
+<span class="eqno">(24)<a class="headerlink" href="#equation-f7e9bbe3-3c0b-486a-aaba-8014c54af63c" title="Permalink to this equation">#</a></span>\[\begin{equation}
     \int _0 ^{1} 3x^2 \mathrm{d}x = 3 \left[ \frac{1}{3}x^3 \right] _0 ^1 = 1-0 = 1.
 \end{equation}\]</div>
 <p>La fonction cumulative <span class="math notranslate nohighlight">\(F\)</span> est <span class="math notranslate nohighlight">\(F(x) = \int _0 ^x 3x'^2\mathrm{d}x' = x^3\)</span> et donc <span class="math notranslate nohighlight">\(F^{-1}(x) = x^{1/3}\)</span>.
-La figure ci-dessous montre la distribution <span class="math notranslate nohighlight">\(f(x)\)</span> générée (en orange) à partir de données distribuées uniformément (représentées en bleu); la distribution désirée <span class="math notranslate nohighlight">\(f(x)\)</span> est aussi représentée.</p>
+Le graphique ci-dessous montre la distribution <span class="math notranslate nohighlight">\(f(x)\)</span> générée (en orange) à partir de données distribuées uniformément (représentées en bleu); la distribution désirée <span class="math notranslate nohighlight">\(f(x)\)</span> est aussi représentée.</p>
 </div>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
@@ -775,9 +788,6 @@ La figure ci-dessous montre la distribution <span class="math notranslate nohigh
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/proba_9_0.png" src="../_images/proba_9_0.png" />
-</div>
 </div>
 </section>
 <section id="mesures-de-formes">
@@ -791,35 +801,35 @@ Pour cela, on définit l’<strong>espérance mathématique</strong> d’une fon
 <p>Cette quantité correspond à la moyenne de <span class="math notranslate nohighlight">\(g(x)\)</span> pondérée par la pdf <span class="math notranslate nohighlight">\(f(x)\)</span>; c’est pourquoi on appelle parfois l’espérance la <strong>moyenne</strong> de <span class="math notranslate nohighlight">\(g(X)\)</span>.
 La fonction <span class="math notranslate nohighlight">\(g(x)\)</span> peut être ce que l’on veut: les fonctions polynomiales <span class="math notranslate nohighlight">\(g(x) = x^n\)</span> sont particulièrement intéressantes et leurs moments <span class="math notranslate nohighlight">\(\mathbb{E}[X^n]\)</span> sont appelés <strong>moments d’ordre <span class="math notranslate nohighlight">\(n\)</span></strong>.</p>
 <p>On définit la <strong>moyenne</strong> de <span class="math notranslate nohighlight">\(X\)</span> (i.e. <span class="math notranslate nohighlight">\(g(x) = x\)</span>) la quantité</p>
-<div class="amsmath math notranslate nohighlight" id="equation-15715e1c-00f7-48f3-8726-19e194729cc2">
-<span class="eqno">(26)<a class="headerlink" href="#equation-15715e1c-00f7-48f3-8726-19e194729cc2" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-4cfbe22f-dcee-42a4-a9f5-be124b430c8c">
+<span class="eqno">(26)<a class="headerlink" href="#equation-4cfbe22f-dcee-42a4-a9f5-be124b430c8c" title="Permalink to this equation">#</a></span>\[\begin{equation}
     \mathbb{E}[X] = \mu _1 = \int _{-\infty} ^{\infty} x\times f(x) \mathrm{d}x.
 \end{equation}\]</div>
 <p>Cette définition s’étend aux probabilités discrètes.
 Dans ce cas, elle correspond parfaitement à la définition de la moyenne statistique définie par l’équation \eqref{eq:moyenne-stats}: si on considère <span class="math notranslate nohighlight">\(n\)</span> mesures de <span class="math notranslate nohighlight">\(X\)</span> notées <span class="math notranslate nohighlight">\(\left\{ x_i \right\}\)</span> toutes équiprobables <span class="math notranslate nohighlight">\(p(x_i) = \frac{1}{n}\)</span>, on a:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a922d48a-231c-4894-aceb-179f9a7340e6">
-<span class="eqno">(27)<a class="headerlink" href="#equation-a922d48a-231c-4894-aceb-179f9a7340e6" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-4078f7cc-7c63-4dfe-8a90-eae8691408f7">
+<span class="eqno">(27)<a class="headerlink" href="#equation-4078f7cc-7c63-4dfe-8a90-eae8691408f7" title="Permalink to this equation">#</a></span>\[\begin{equation}
     \mu _1 = \sum _{i=0}^n x_i p(x_i) = \frac{1}{n} \sum _{i=0}^n x_i = \overline{x}.
 \end{equation}\]</div>
 <p>Cela signifie que la moyenne de mesures correspond bien à la espérance de la variable aléatoire associée.</p>
 <p>La variable <span class="math notranslate nohighlight">\(X' = X-\mu _1\)</span> est de moyenne nulle: on l’appelle donc <strong>variable centrée</strong>.
 On peut alors définir l’étalement de la distribution <span class="math notranslate nohighlight">\(f\)</span> en considérant l’espérance de la variable centrée au carré <span class="math notranslate nohighlight">\(\mathbb{E}[X'^2]\)</span>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b0625a66-f2ad-42b2-aa80-ca8745119c01">
-<span class="eqno">(28)<a class="headerlink" href="#equation-b0625a66-f2ad-42b2-aa80-ca8745119c01" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-6193b2d8-bc87-45aa-9225-119ced26c314">
+<span class="eqno">(28)<a class="headerlink" href="#equation-6193b2d8-bc87-45aa-9225-119ced26c314" title="Permalink to this equation">#</a></span>\[\begin{equation}
     \mathbb{E}[X'^2] = \sigma ^2 = \int _{-\infty} ^{\infty} (x - \mu_1) ^2\times f(x) \mathrm{d}x = \int _{-\infty} ^{\infty} (x^2 - \mu_1^2) \times f(x) \mathrm{d}x = \mathbb{E}[X^2] - \mathbb{E}[X]^2.
 \end{equation}\]</div>
 <p>On reconnait là la forme de l’équation \eqref{eq:variance-stats}; l’<strong>écart-type</strong> <span class="math notranslate nohighlight">\(\sigma = \sqrt{\mathbb{E}[X'^2]}\)</span> est donc la mesure de la dispersion de <span class="math notranslate nohighlight">\(X\)</span> autour de la valeur moyenne <span class="math notranslate nohighlight">\(\mu _1\)</span>.</p>
 <p>La <strong>médiane</strong> de la variable <span class="math notranslate nohighlight">\(X\)</span>, notée <span class="math notranslate nohighlight">\(\mathrm{med}(X)\)</span> se définit comme:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-595354d2-a009-4f9c-852d-67a3760d51fe">
-<span class="eqno">(29)<a class="headerlink" href="#equation-595354d2-a009-4f9c-852d-67a3760d51fe" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-09356aff-8673-4427-a9a8-7c3bef99ad8d">
+<span class="eqno">(29)<a class="headerlink" href="#equation-09356aff-8673-4427-a9a8-7c3bef99ad8d" title="Permalink to this equation">#</a></span>\[\begin{equation}
     \int _{-\infty} ^{\mathrm{med}(X)} f(x)\mathrm{d}x = \int _{\mathrm{med}(X)} ^{\infty} f(x)\mathrm{d}x = \frac{1}{2}.
 \end{equation}\]</div>
 <p>Le <strong>mode</strong> de la variable <span class="math notranslate nohighlight">\(X\)</span> est la valeur <span class="math notranslate nohighlight">\(x\)</span> qui maximise la pdf <span class="math notranslate nohighlight">\(f(x)\)</span>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-71efe45c-e662-42d1-876a-42aaad9b2451">
-<span class="eqno">(30)<a class="headerlink" href="#equation-71efe45c-e662-42d1-876a-42aaad9b2451" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-a3c1e131-6a5c-4cbb-9448-e52b8f8fbb7c">
+<span class="eqno">(30)<a class="headerlink" href="#equation-a3c1e131-6a5c-4cbb-9448-e52b8f8fbb7c" title="Permalink to this equation">#</a></span>\[\begin{equation}
     \mathrm{mode}(X) = \arg _{x\in [-\infty, \infty]} f(x).
 \end{equation}\]</div>
-<p>La figure ci-dessous donne un exemple de moyenne (ligne verticale orange) et de mode (ligne verticale bleue) pour une distribution de probabilité arbitraire.</p>
+<p>Le graphique ci-dessous donne un exemple de moyenne (ligne verticale orange) et de mode (ligne verticale bleue) pour une distribution de probabilité arbitraire.</p>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> <span class="c1"># importer maplotlib</span>
@@ -864,7 +874,16 @@ On peut alors définir l’étalement de la distribution <span class="math notra
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/proba_11_0.png" src="../_images/proba_11_0.png" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> <span class="c1"># importer maplotlib</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">exp</span><span class="p">,</span> <span class="n">sin</span><span class="p">,</span> <span class="n">pi</span><span class="p">,</span> <span class="n">cos</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;matplotlib&#39;
+</pre></div>
+</div>
 </div>
 </div>
 <hr class="footnotes docutils" />
