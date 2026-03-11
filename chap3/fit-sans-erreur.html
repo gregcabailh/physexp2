@@ -55,7 +55,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="&lt;no title&gt;" href="fit-avec-erreur.html" />
+    <link rel="next" title="Ajustement avec des données avec erreurs" href="fit-avec-erreur.html" />
     <link rel="prev" title="Principe de l’ajustement" href="principe.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -208,6 +208,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      Ajustement avec des données sans erreurs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fit-avec-erreur.html">
+     Ajustement avec des données avec erreurs
     </a>
    </li>
   </ul>
@@ -420,8 +425,8 @@ title="Print to PDF"
   <section class="tex2jax_ignore mathjax_ignore" id="ajustement-avec-des-donnees-sans-erreurs">
 <span id="content-fit-no-error"></span><h1>Ajustement avec des données sans erreurs<a class="headerlink" href="#ajustement-avec-des-donnees-sans-erreurs" title="Permalink to this headline">#</a></h1>
 <p>S’il s’agit de réduire l’écart entre <span class="math notranslate nohighlight">\(N\)</span> points de données <span class="math notranslate nohighlight">\(\left\{y_i\right\}\)</span> obtenus pour des valeurs <span class="math notranslate nohighlight">\(\left\{x_i\right\}\)</span> et le modèle <span class="math notranslate nohighlight">\(f\)</span> évalué au valeurs <span class="math notranslate nohighlight">\(\left\{x_i\right\}\)</span>, une quantité possible <a class="footnote-reference brackets" href="#excel" id="id1">1</a> est:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ed46df54-8440-4da7-9b11-f3f9cbd9f427">
-<span class="eqno">(67)<a class="headerlink" href="#equation-ed46df54-8440-4da7-9b11-f3f9cbd9f427" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-27611ba8-2130-41ce-b0fd-0f9da1a98359">
+<span class="eqno">(67)<a class="headerlink" href="#equation-27611ba8-2130-41ce-b0fd-0f9da1a98359" title="Permalink to this equation">#</a></span>\[\begin{equation}
     R^2 =  1- \frac{\sum _{i=1}^N\left(f(x_i; \alpha,\beta,...) - y_i\right)^2}{\sum _{i=1}^N\left(\bar{y}-y_i\right)^2},
 \end{equation}\]</div>
 <p>où <span class="math notranslate nohighlight">\(\bar{y}\)</span> est la moyenne des mesures <span class="math notranslate nohighlight">\(\left\{y_i\right\}\)</span>.
@@ -476,13 +481,13 @@ La valeur de <span class="math notranslate nohighlight">\(R^2\)</span> obtenue p
 </tbody>
 </table>
 <p>Il s’agit de paires de deux mesures <span class="math notranslate nohighlight">\(x_i\)</span> et <span class="math notranslate nohighlight">\(y_i\)</span> reliées par la relation:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4136de26-6179-4f02-b9fd-d3887e733a21">
-<span class="eqno">(68)<a class="headerlink" href="#equation-4136de26-6179-4f02-b9fd-d3887e733a21" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-272fdbc8-4b36-4c30-942e-881e0d5d1f24">
+<span class="eqno">(68)<a class="headerlink" href="#equation-272fdbc8-4b36-4c30-942e-881e0d5d1f24" title="Permalink to this equation">#</a></span>\[\begin{equation}
     y_i = a\times x_i + b.
 \end{equation}\]</div>
 <p>Le coefficient de détermination que l’on va minimiser vaut:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-faedf8ed-8a80-42a1-bbdc-499f27b0e099">
-<span class="eqno">(69)<a class="headerlink" href="#equation-faedf8ed-8a80-42a1-bbdc-499f27b0e099" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-899e830c-f1e8-424d-9f07-4d44aaf3a86d">
+<span class="eqno">(69)<a class="headerlink" href="#equation-899e830c-f1e8-424d-9f07-4d44aaf3a86d" title="Permalink to this equation">#</a></span>\[\begin{equation}
     R^2 =  1- \frac{\sum _{i=1}^N\left(a\times x_i+b - y_i\right)^2}{\sum _{i=1}^N\left(\bar{y}-y_i\right)^2}.
 \end{equation}\]</div>
 <p>Le graphique ci-dessus montre que le modèle  s’ajuste bien aux données; le coefficient de détermination <span class="math notranslate nohighlight">\(R^2\)</span> obtenu vaut 0.96.</p>
@@ -564,7 +569,7 @@ Valeur de R^2: 0.96
     <a class='right-next' id="next-link" href="fit-avec-erreur.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">&lt;no title&gt;</p>
+        <p class="prev-next-title">Ajustement avec des données avec erreurs</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
