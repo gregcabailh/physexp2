@@ -525,7 +525,7 @@ Ces zones sont appelées périmètres (“scope” en anglais) et sont définies
 </pre></div>
 </div>
 <p>Un point important est que les variables définies à l’intérieur d’un scope ne sont valables que dans ce scope et n’existent plus en dehors de ce scope.
-De la sorte, les variables définies directement dans le scope principal sont dites <em>gloables</em> et donc accessibles dans tous les scopes contenus dans le scope principal.
+De la sorte, les variables définies directement dans le scope principal sont dites <em>globales</em> et donc accessibles dans tous les scopes contenus dans le scope principal.
 Enfin, les scopes peuvent être insérés les uns dans les autres.</p>
 </section>
 <section id="mots-cles-definissant-des-scopes">
@@ -586,13 +586,13 @@ Il est bien sur possible de comparer d’autres variables comme des strings, uti
 </div>
 </div>
 </div>
-<p>Dans le cas de dictionaires, il est parfois utile de vérifier qu’une clé est présente dans un dictionnaire avant de faire quelque chose avec.
-Pour cela on peut tester si une clé est présente dans la liste des clés du dictionaire en utilisant le mot-clé <code class="docutils literal notranslate"><span class="pre">in</span></code> et la méthode <code class="docutils literal notranslate"><span class="pre">keys()</span></code>.</p>
+<p>Dans le cas de dictionnaires, il est parfois utile de vérifier qu’une clé est présente dans un dictionnaire avant de faire quelque chose avec.
+Pour cela on peut tester si une clé est présente dans la liste des clés du dictionnaire en utilisant le mot-clé <code class="docutils literal notranslate"><span class="pre">in</span></code> et la méthode <code class="docutils literal notranslate"><span class="pre">keys()</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dictionaire</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;chat&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;chien&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">}</span>
-<span class="k">if</span> <span class="s2">&quot;chat&quot;</span> <span class="ow">in</span> <span class="n">dictionaire</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;J&#39;ai&quot;</span><span class="p">,</span> <span class="n">dictionaire</span><span class="p">[</span><span class="s2">&quot;chat&quot;</span><span class="p">],</span> <span class="s2">&quot;chat(s)&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dictionnaire</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;chat&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;chien&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">}</span>
+<span class="k">if</span> <span class="s2">&quot;chat&quot;</span> <span class="ow">in</span> <span class="n">dictionnaire</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;J&#39;ai&quot;</span><span class="p">,</span> <span class="n">dictionnaire</span><span class="p">[</span><span class="s2">&quot;chat&quot;</span><span class="p">],</span> <span class="s2">&quot;chat(s)&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -610,7 +610,7 @@ La plus célèbre est la boucle <code class="docutils literal notranslate"><span
 Le type de répétition le plus exploité est la répétition sur les éléments d’une liste.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">radii</span><span class="o">=</span><span class="p">[</span><span class="mf">0.9</span><span class="p">,</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">0.95</span><span class="p">,</span><span class="mf">1.1</span><span class="p">,</span><span class="mf">1.2</span><span class="p">,</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.85</span><span class="p">,</span><span class="mf">1.05</span><span class="p">,</span><span class="mf">1.0</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">radii</span><span class="o">=</span><span class="p">[</span><span class="mf">0.9</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.95</span><span class="p">,</span> <span class="mf">1.1</span><span class="p">,</span> <span class="mf">1.2</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.85</span><span class="p">,</span> <span class="mf">1.05</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">]</span>
 <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">radii</span><span class="p">:</span>
   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;r =&quot;</span><span class="p">,</span><span class="n">r</span><span class="p">)</span>
 </pre></div>
@@ -631,13 +631,13 @@ r = 1.0
 </div>
 </div>
 </div>
-<p>Dans cette exemple, pour chaque élément noté <code class="docutils literal notranslate"><span class="pre">r</span></code> de la liste <code class="docutils literal notranslate"><span class="pre">radii</span></code>, on va afficher la valeur de <code class="docutils literal notranslate"><span class="pre">r</span></code>.
+<p>Dans cet exemple, pour chaque élément noté <code class="docutils literal notranslate"><span class="pre">r</span></code> de la liste <code class="docutils literal notranslate"><span class="pre">radii</span></code>, on va afficher la valeur de <code class="docutils literal notranslate"><span class="pre">r</span></code>.
 Pour cela la condition <code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">in</span> <span class="pre">radii</span></code> créé bien une variable <code class="docutils literal notranslate"><span class="pre">r</span></code> qui existe dans le scope et disparait en dehors.
 A chaque fois que le contenu du scope est exécuté une fois, une nouvelle valeur de <code class="docutils literal notranslate"><span class="pre">r</span></code> est assignée en suivant l’ordre dans la liste <code class="docutils literal notranslate"><span class="pre">radii</span></code> et le contenu du scope est répété avec cette nouvelle valeur.</p>
 <p>Parfois on n’a pas de liste à utiliser comme condition; c’est pourquoi on va utiliser la fonction <code class="docutils literal notranslate"><span class="pre">range()</span></code> qui va remplacer la liste.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">radii</span><span class="o">=</span><span class="p">[</span><span class="mf">0.9</span><span class="p">,</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">0.95</span><span class="p">,</span><span class="mf">1.1</span><span class="p">,</span><span class="mf">1.2</span><span class="p">,</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.85</span><span class="p">,</span><span class="mf">1.05</span><span class="p">,</span><span class="mf">1.0</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">radii</span><span class="o">=</span><span class="p">[</span><span class="mf">0.9</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.95</span><span class="p">,</span> <span class="mf">1.1</span><span class="p">,</span> <span class="mf">1.2</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.85</span><span class="p">,</span> <span class="mf">1.05</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">]</span>
 <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">radii</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
   <span class="c1">#l&#39;index de la variable va avoir les valeurs 0..9</span>
@@ -660,7 +660,7 @@ Element 9 a pour valeur: 1.0
 </div>
 </div>
 </div>
-<p>On remarque que cette fonction <code class="docutils literal notranslate"><span class="pre">range()</span></code> donnera une liste de la taille donnée par l’argument commencant toujours à 0.</p>
+<p>On remarque que cette fonction <code class="docutils literal notranslate"><span class="pre">range()</span></code> donnera une liste de la taille donnée par l’argument commencant toujours à <span class="math notranslate nohighlight">\(0\)</span>.</p>
 <div class="exercise admonition" id="for-2-lists">
 
 <p class="admonition-title"><span class="caption-number">Exercise 10 </span></p>
@@ -705,7 +705,7 @@ Jacques 6356795
 
 <p class="admonition-title"><span class="caption-number">Exercise 11 </span></p>
 <section id="exercise-content">
-<p>On se donne un dictionaire contenant le nombre de kilomètres parcourus pour certains moyens de transport <code class="docutils literal notranslate"><span class="pre">{&quot;pied&quot;:</span> <span class="pre">200,</span> <span class="pre">&quot;vélo&quot;:</span> <span class="pre">50,</span> <span class="pre">&quot;voiture&quot;:310}</span></code>; on souhaite afficher les kilomètres pour les moyens de transport dans la liste\ <code class="docutils literal notranslate"><span class="pre">[&quot;voiture&quot;,</span> <span class="pre">&quot;velo&quot;,</span> <span class="pre">&quot;train&quot;,</span> <span class="pre">&quot;avion&quot;]</span></code> et un message “Pas de kilomètres en {moyen de transport}” lorsqu’il n’y a pas de valeur pour ce moyen de transport dans le dictionaire.</p>
+<p>On se donne un dictionnaire contenant le nombre de kilomètres parcourus pour certains moyens de transport <code class="docutils literal notranslate"><span class="pre">{&quot;pied&quot;:</span> <span class="pre">200,</span> <span class="pre">&quot;vélo&quot;:</span> <span class="pre">50,</span> <span class="pre">&quot;voiture&quot;:310}</span></code>; on souhaite afficher les kilomètres pour les moyens de transport dans la liste <code class="docutils literal notranslate"><span class="pre">[&quot;voiture&quot;,</span> <span class="pre">&quot;velo&quot;,</span> <span class="pre">&quot;train&quot;,</span> <span class="pre">&quot;avion&quot;]</span></code> et un message “Pas de kilomètres en {moyen de transport}” lorsqu’il n’y a pas de valeur pour ce moyen de transport dans le dictionaire.</p>
 </section>
 </div>
 <div class="solution dropdown admonition" id="appendix/conditions-solution-3">
@@ -731,7 +731,7 @@ La boucle <code class="docutils literal notranslate"><span class="pre">while</sp
 Par exemple, on peut créer une boucle <code class="docutils literal notranslate"><span class="pre">for</span></code> à partir d’une boucle <code class="docutils literal notranslate"><span class="pre">while</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">radii</span><span class="o">=</span><span class="p">[</span><span class="mf">0.9</span><span class="p">,</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">0.95</span><span class="p">,</span><span class="mf">1.1</span><span class="p">,</span><span class="mf">1.2</span><span class="p">,</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.85</span><span class="p">,</span><span class="mf">1.05</span><span class="p">,</span><span class="mf">1.0</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">radii</span><span class="o">=</span><span class="p">[</span><span class="mf">0.9</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.95</span><span class="p">,</span> <span class="mf">1.1</span><span class="p">,</span> <span class="mf">1.2</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.85</span><span class="p">,</span> <span class="mf">1.05</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">]</span>
 <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="k">while</span> <span class="n">i</span><span class="o">&lt;</span><span class="nb">len</span><span class="p">(</span><span class="n">radii</span><span class="p">):</span>
   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Element&quot;</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="s2">&quot;a pour valeur:&quot;</span><span class="p">,</span> <span class="n">radii</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
@@ -769,9 +769,12 @@ Element 9 a pour valeur: 1.0
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.621
-0.367
-Valeur 3 au dessous de 0.1: 0.03167273951988514
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.492
+0.540
+0.240
+0.645
+0.873
+Valeur 6 au dessous de 0.1: 0.6931470548100932
 </pre></div>
 </div>
 </div>
@@ -791,8 +794,8 @@ Ensuite les opérations que doit faire fonction sont définies dans un scope.</p
 </pre></div>
 </div>
 <p>La fonction <code class="docutils literal notranslate"><span class="pre">affine(a)</span></code> définie ci-dessus prend en entrée une variable (notée <code class="docutils literal notranslate"><span class="pre">a</span></code>).
-Elle calcule au sein de son scope <code class="docutils literal notranslate"><span class="pre">2*a+1</span></code> et retourne cette valeur grâce au mot-clé <code class="docutils literal notranslate"><span class="pre">return</span></code>.
-Elle pourrait cependant en retourner plusieurs valeurs en utilisant des virgules comme séparateurs <a class="footnote-reference brackets" href="#tuple" id="id1">1</a>.</p>
+Elle calcule au sein de son scope <code class="docutils literal notranslate"><span class="pre">2*a+1</span></code> et renvoie cette valeur grâce au mot-clé <code class="docutils literal notranslate"><span class="pre">return</span></code>.
+Elle pourrait cependant renvoyer plusieurs valeurs en utilisant des virgules comme séparateurs <a class="footnote-reference brackets" href="#tuple" id="id1">1</a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calculator</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
@@ -837,7 +840,7 @@ Salut Baptiste !
 </div>
 <p>Dans l’exemple ci-dessus, nous avons défini deux fonctions: la première prend en entrée le nom d’une personne et sert à afficher le “salut” avec le nom donné en entrée.
 La deuxième fonction <code class="docutils literal notranslate"><span class="pre">SaluerToutLeMonde()</span></code> prend en entrée une liste de noms et salue tout les noms de cette liste.
-On peut voir que dans les deux cas, ces fonctions ne retournent pas de valeur.</p>
+On peut voir que dans les deux cas, ces fonctions ne renvoient pas de valeur.</p>
 <p>Un point important est que toutes les variables définies au sein d’un scope n’existent qu’au sein du scope.
 Notamment cela permet d’utiliser une fonction à l’intérieur de son propre scope.</p>
 <div class="cell docutils container">
@@ -869,7 +872,7 @@ Valeur finale: 0
 <p>Dans l’exemple ci-dessus on définit une fonction <code class="docutils literal notranslate"><span class="pre">EnleverUn()</span></code> qui retire 1 à la valeur d’entrée si celle-ci est plus grande que 1.
 Elle recommence ce processus jusqu’à ce que la valeur d’entrée soit inférieur à 1.
 Cette fonction peut être dite <em>récursive</em> puisqu’elle s’appelle elle-même à l’intérieur de son scope.
-Les fonctions récursives sont très intéressantes, mais elles doivent contenir un moyen de briser la récursivité: dans l’exemple ci-dessus, il s’agit du <code class="docutils literal notranslate"><span class="pre">else</span></code> qui permet de retourner la valeur <code class="docutils literal notranslate"><span class="pre">a</span></code> et non <code class="docutils literal notranslate"><span class="pre">EnlverUn(a)</span></code>.</p>
+Les fonctions récursives sont très intéressantes, mais elles doivent contenir un moyen de briser la récursivité: dans l’exemple ci-dessus, il s’agit du <code class="docutils literal notranslate"><span class="pre">else</span></code> qui permet de renvoyer la valeur <code class="docutils literal notranslate"><span class="pre">a</span></code> et non <code class="docutils literal notranslate"><span class="pre">EnlverUn(a)</span></code>.</p>
 <p>On peut voir que cette séquence d’action utilisant des fonctions récursives est équivalente à une boucle <code class="docutils literal notranslate"><span class="pre">for</span></code> ou <code class="docutils literal notranslate"><span class="pre">while</span></code> comme donné ci-dessous.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -961,7 +964,7 @@ Si le reste est nul, alors ce n’est pas un nombre premier.</p>
 <hr class="footnotes docutils" />
 <dl class="footnote brackets">
 <dt class="label" id="tuple"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>En réalité, Python rassemble les deux valeurs dans un <em>tuple</em> et retourne ce tuple. Cependant la flexibilité de Python dans son syle d’écriture permet de faire comme si la fonction retournait deux valeurs.</p>
+<dd><p>En réalité, Python rassemble les deux valeurs dans un <em>tuple</em> et renvoie ce tuple. Cependant la flexibilité de Python dans son syle d’écriture permet de faire comme si la fonction renvoyait deux valeurs.</p>
 </dd>
 </dl>
 </section>
