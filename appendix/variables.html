@@ -469,7 +469,7 @@ title="Print to PDF"
 <li><p><strong>entiers:</strong> ce sont les nombres entiers avec un signe (ex: 0, -1, 42)</p></li>
 <li><p><strong>floats:</strong> ce sont les nombres décimaux avex un signe (ex: 0.0, -1.96, 42e9).
 Ces nombres ne sont pas représentés exactement (i.e. avec toutes leurs décimales) et sont souvent arrondis lorsqu’ils sont représentés.</p></li>
-<li><p><strong>booléens:</strong> ce sont des variables <code class="docutils literal notranslate"><span class="pre">True</span></code> ou <code class="docutils literal notranslate"><span class="pre">False</span></code>, très utiles lors des tests avec <code class="docutils literal notranslate"><span class="pre">if</span></code> (voir Section \ref{sec:ifelifelse}).</p></li>
+<li><p><strong>booléens:</strong> ce sont des variables <code class="docutils literal notranslate"><span class="pre">True</span></code> ou <code class="docutils literal notranslate"><span class="pre">False</span></code>, très utiles lors des tests avec <code class="docutils literal notranslate"><span class="pre">if</span></code> (voir Section <a class="reference internal" href="conditions.html#content-ifelifelse"><span class="std std-ref">If/Elif/Else</span></a>).</p></li>
 <li><p><strong>strings:</strong> ce sont des chaines de caractères définies par des guillemets (ex: <code class="docutils literal notranslate"><span class="pre">&quot;bonjour&quot;</span></code>).</p></li>
 <li><p><strong>listes:</strong> ce sont des tableaux de valeurs (voir Section <a class="reference internal" href="#content-liste"><span class="std std-ref">Listes</span></a>).</p></li>
 <li><p><strong>dictionaries:</strong> ce sont des listes dont les indices ne sont pas des nombres mais des variables comme des chaines de caractères (voir Section <a class="reference internal" href="#content-dictionaries"><span class="std std-ref">Dictionnaires</span></a>)</p></li>
@@ -480,15 +480,27 @@ Ces nombres ne sont pas représentés exactement (i.e. avec toutes leurs décima
 Une liste sert à contenir une liste de valeurs ou de variables.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">radii</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.9</span><span class="p">,</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">0.95</span><span class="p">,</span><span class="mf">1.1</span><span class="p">,</span><span class="mf">1.2</span><span class="p">,</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.85</span><span class="p">,</span><span class="mf">1.05</span><span class="p">,</span><span class="mf">1.0</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">radii</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.9</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.95</span><span class="p">,</span> <span class="mf">1.1</span><span class="p">,</span> <span class="mf">1.2</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.85</span><span class="p">,</span> <span class="mf">1.05</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 </div>
 <p>La présence de crochets entourant des valeurs séparées par des virgules est interprété par Python comme la construction d’une liste, cette liste étant ensuite assignée à la variable <code class="docutils literal notranslate"><span class="pre">radii</span></code>.</p>
 <p>Cette liste est ordonnée au sens où l’on peut récupérer des valeurs particulières de cette liste en utilisant le numéro de l’élément.</p>
-<p>print(“Premiere valeur:”,radii[0])
-print(“Troisieme valeur:”,radii[2])</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Premiere valeur:&quot;</span><span class="p">,</span><span class="n">radii</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Troisieme valeur:&quot;</span><span class="p">,</span><span class="n">radii</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Premiere valeur: 0.9
+Troisieme valeur: 0.95
+</pre></div>
+</div>
+</div>
+</div>
 <p>Comme beaucoup de langages de programmation, Python définit le premier élément d’une liste par l’index 0.
 Par conséquent, si une liste a <code class="docutils literal notranslate"><span class="pre">n</span></code> éléments, on pourra récupérer le dernier élément de cette liste avec l’index <code class="docutils literal notranslate"><span class="pre">n-1</span></code>.
 Si en revanche on essaye de récupérer l’index <code class="docutils literal notranslate"><span class="pre">n</span></code> ou plus, on va obtenir une erreur.</p>
@@ -501,7 +513,7 @@ Si en revanche on essaye de récupérer l’index <code class="docutils literal 
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">IndexError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">print</span><span class="p">(</span><span class="n">radii</span><span class="p">[</span><span class="mi">10</span><span class="p">])</span>
 
 <span class="ne">IndexError</span>: list index out of range
@@ -614,18 +626,18 @@ Cette organisation permet de contenir plus d’information, puisque chaque valeu
 On accède donc aux éléments du dictionnaire pour consulter l’élément ou bien le modifier grâce à cette clé.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dictionaire</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;mario&quot;</span><span class="p">:</span> <span class="mf">1.50</span><span class="p">,</span> <span class="s2">&quot;luigi&quot;</span><span class="p">:</span> <span class="mf">1.80</span><span class="p">}</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dictionaire:&quot;</span><span class="p">,</span> <span class="n">dictionaire</span><span class="p">)</span>
-<span class="n">dictionaire</span><span class="p">[</span><span class="s2">&quot;luigi&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1.78</span> <span class="c1"># correction de la taille de luigi</span>
-<span class="n">dictionaire</span><span class="p">[</span><span class="s2">&quot;peach&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1.60</span> <span class="c1"># ajout d&#39;une nouvelle taille</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dictionaire à jour:&quot;</span><span class="p">,</span> <span class="n">dictionaire</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Taille de Luigi:&quot;</span><span class="p">,</span><span class="n">dictionaire</span><span class="p">[</span><span class="s2">&quot;luigi&quot;</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dictionnaire</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;mario&quot;</span><span class="p">:</span> <span class="mf">1.50</span><span class="p">,</span> <span class="s2">&quot;luigi&quot;</span><span class="p">:</span> <span class="mf">1.80</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dictionnaire:&quot;</span><span class="p">,</span> <span class="n">dictionnaire</span><span class="p">)</span>
+<span class="n">dictionnaire</span><span class="p">[</span><span class="s2">&quot;luigi&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1.78</span> <span class="c1"># correction de la taille de luigi</span>
+<span class="n">dictionnaire</span><span class="p">[</span><span class="s2">&quot;peach&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1.60</span> <span class="c1"># ajout d&#39;une nouvelle taille</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dictionnaire à jour:&quot;</span><span class="p">,</span> <span class="n">dictionnaire</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Taille de Luigi:&quot;</span><span class="p">,</span><span class="n">dictionnaire</span><span class="p">[</span><span class="s2">&quot;luigi&quot;</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Dictionaire: {&#39;mario&#39;: 1.5, &#39;luigi&#39;: 1.8}
-Dictionaire à jour: {&#39;mario&#39;: 1.5, &#39;luigi&#39;: 1.78, &#39;peach&#39;: 1.6}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Dictionnaire: {&#39;mario&#39;: 1.5, &#39;luigi&#39;: 1.8}
+Dictionnaire à jour: {&#39;mario&#39;: 1.5, &#39;luigi&#39;: 1.78, &#39;peach&#39;: 1.6}
 Taille de Luigi: 1.78
 </pre></div>
 </div>
@@ -634,8 +646,8 @@ Taille de Luigi: 1.78
 <p>Comme ce ne sont pas des listes et donc on ne connait pas à priori les indices de celui-ci, on utilise la fonction <code class="docutils literal notranslate"><span class="pre">keys()</span></code> pour l’obtenir.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dictionaire</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;mario&#39;</span><span class="p">:</span> <span class="mf">1.5</span><span class="p">,</span> <span class="s1">&#39;luigi&#39;</span><span class="p">:</span> <span class="mf">1.78</span><span class="p">,</span> <span class="s1">&#39;peach&#39;</span><span class="p">:</span> <span class="mf">1.6</span><span class="p">}</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Cles:&quot;</span><span class="p">,</span><span class="n">dictionaire</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dictionnaire</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;mario&#39;</span><span class="p">:</span> <span class="mf">1.5</span><span class="p">,</span> <span class="s1">&#39;luigi&#39;</span><span class="p">:</span> <span class="mf">1.78</span><span class="p">,</span> <span class="s1">&#39;peach&#39;</span><span class="p">:</span> <span class="mf">1.6</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Cles:&quot;</span><span class="p">,</span><span class="n">dictionnaire</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
@@ -645,7 +657,7 @@ Taille de Luigi: 1.78
 </div>
 </div>
 </div>
-<p>La méthode <code class="docutils literal notranslate"><span class="pre">update()</span></code> permet de <em>mettre à jour</em> un dictionaire: si les clés données en argument de la méthode sont déjà présents dans le dictionaire, les valeurs associées seront mises à jour; sinon elles seront ajoutées au dictionnaire.</p>
+<p>La méthode <code class="docutils literal notranslate"><span class="pre">update()</span></code> permet de <em>mettre à jour</em> un dictionnaire: si les clés données en argument de la méthode sont déjà présents dans le dictionnaire, les valeurs associées seront mises à jour; sinon elles seront ajoutées au dictionnaire.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">prix</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;peche&quot;</span><span class="p">:</span> <span class="mf">1.90</span><span class="p">,</span> <span class="s2">&quot;courgette&quot;</span><span class="p">:</span> <span class="mf">2.10</span><span class="p">}</span>
@@ -675,7 +687,7 @@ Nouveaux prix: {&#39;peche&#39;: 20.5, &#39;courgette&#39;: 2.1, &#39;chips&#39;
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">10</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">11</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">prix</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;peche&quot;</span><span class="p">:</span> <span class="mf">2.05</span><span class="p">,</span> <span class="s2">&quot;courgette&quot;</span><span class="p">:</span> <span class="mf">2.10</span><span class="p">,</span> <span class="s2">&quot;chips&quot;</span><span class="p">:</span> <span class="mf">1.10</span><span class="p">}</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="nb">print</span><span class="p">(</span><span class="n">prix</span><span class="p">[</span><span class="s2">&quot;pomme&quot;</span><span class="p">])</span>
 
