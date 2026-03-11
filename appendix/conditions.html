@@ -210,11 +210,6 @@ const thebe_selector_output = ".output, .cell_output"
      Ajustement avec des données sans erreurs
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../chap3/fit-avec-erreur.html">
-     Ajustement avec des données avec erreurs
-    </a>
-   </li>
   </ul>
  </li>
  <li class="toctree-l1 current active has-children">
@@ -668,14 +663,14 @@ Element 9 a pour valeur: 1.0
 <p>On remarque que cette fonction <code class="docutils literal notranslate"><span class="pre">range()</span></code> donnera une liste de la taille donnée par l’argument commencant toujours à 0.</p>
 <div class="exercise admonition" id="for-2-lists">
 
-<p class="admonition-title"><span class="caption-number">Exercise 11 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 10 </span></p>
 <section id="exercise-content">
 <p>Utiliser une boucle for qui va créer deux listes, une contenant tous nombres entiers entre 1 et 10 et  l’autre ces mêmes nombres entiers au carré.</p>
 </section>
 </div>
 <div class="solution dropdown admonition" id="appendix/conditions-solution-1">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="#for-2-lists"> Exercise 11</a></p>
+<p class="admonition-title">Solution to<a class="reference internal" href="#for-2-lists"> Exercise 10</a></p>
 <section id="solution-content">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span><span class="o">=</span><span class="p">[]</span>
 <span class="n">squares</span><span class="o">=</span><span class="p">[]</span>
@@ -708,14 +703,14 @@ Jacques 6356795
 </div>
 <div class="exercise admonition" id="transport-liste">
 
-<p class="admonition-title"><span class="caption-number">Exercise 12 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 11 </span></p>
 <section id="exercise-content">
 <p>On se donne un dictionaire contenant le nombre de kilomètres parcourus pour certains moyens de transport <code class="docutils literal notranslate"><span class="pre">{&quot;pied&quot;:</span> <span class="pre">200,</span> <span class="pre">&quot;vélo&quot;:</span> <span class="pre">50,</span> <span class="pre">&quot;voiture&quot;:310}</span></code>; on souhaite afficher les kilomètres pour les moyens de transport dans la liste\ <code class="docutils literal notranslate"><span class="pre">[&quot;voiture&quot;,</span> <span class="pre">&quot;velo&quot;,</span> <span class="pre">&quot;train&quot;,</span> <span class="pre">&quot;avion&quot;]</span></code> et un message “Pas de kilomètres en {moyen de transport}” lorsqu’il n’y a pas de valeur pour ce moyen de transport dans le dictionaire.</p>
 </section>
 </div>
 <div class="solution dropdown admonition" id="appendix/conditions-solution-3">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="#transport-liste"> Exercise 12</a></p>
+<p class="admonition-title">Solution to<a class="reference internal" href="#transport-liste"> Exercise 11</a></p>
 <section id="solution-content">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">transport_km</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;pied&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span> <span class="s2">&quot;velo&quot;</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span> <span class="s2">&quot;voiture&quot;</span><span class="p">:</span><span class="mi">310</span><span class="p">}</span>
 <span class="n">liste</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;voiture&quot;</span><span class="p">,</span> <span class="s2">&quot;velo&quot;</span><span class="p">,</span> <span class="s2">&quot;train&quot;</span><span class="p">,</span> <span class="s2">&quot;avion&quot;</span><span class="p">]</span>
@@ -774,12 +769,12 @@ Element 9 a pour valeur: 1.0
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.547
-0.665
-0.327
-0.656
-0.623
-Valeur 6 au dessous de 0.1: 0.5374204162309927
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.997
+0.710
+0.416
+0.977
+0.624
+Valeur 6 au dessous de 0.1: 0.3679374215521366
 </pre></div>
 </div>
 </div>
@@ -901,14 +896,14 @@ Valeur finale: 0
 </div>
 <div class="exercise admonition" id="factoriel">
 
-<p class="admonition-title"><span class="caption-number">Exercise 13 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 12 </span></p>
 <section id="exercise-content">
 <p>Calculer le factoriel de 13 à l’aide d’une fonction récursive (voir la section “Fonctions” du polycopié).</p>
 </section>
 </div>
 <div class="solution dropdown admonition" id="appendix/conditions-solution-5">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="#factoriel"> Exercise 13</a></p>
+<p class="admonition-title">Solution to<a class="reference internal" href="#factoriel"> Exercise 12</a></p>
 <section id="solution-content">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">factoriel</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
@@ -930,7 +925,7 @@ Valeur finale: 0
 </div>
 <div class="exercise admonition" id="prime-numbers">
 
-<p class="admonition-title"><span class="caption-number">Exercise 14 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 13 </span></p>
 <section id="exercise-content">
 <p>Créer une fonction qui vérifie si un nombre <span class="math notranslate nohighlight">\(N\)</span> est premier ou non et utiliser cette fonction pour calculer les 10 premiers nombres premiers.
 Pour cela, on peut regarder le reste de la division euclidienne de <span class="math notranslate nohighlight">\(N\)</span> par tous les nombres entre 2 et <span class="math notranslate nohighlight">\(\sqrt{N}\)</span>.
@@ -939,7 +934,7 @@ Si le reste est nul, alors ce n’est pas un nombre premier.</p>
 </div>
 <div class="solution dropdown admonition" id="appendix/conditions-solution-7">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="#prime-numbers"> Exercise 14</a></p>
+<p class="admonition-title">Solution to<a class="reference internal" href="#prime-numbers"> Exercise 13</a></p>
 <section id="solution-content">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sqrt</span>
 

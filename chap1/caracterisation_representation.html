@@ -210,11 +210,6 @@ const thebe_selector_output = ".output, .cell_output"
      Ajustement avec des données sans erreurs
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../chap3/fit-avec-erreur.html">
-     Ajustement avec des données avec erreurs
-    </a>
-   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -687,7 +682,7 @@ Faisons une représentation temporelle des données.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f552449f130&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f9c4baa3160&gt;]
 </pre></div>
 </div>
 <img alt="../_images/caracterisation_representation_2_1.png" src="../_images/caracterisation_representation_2_1.png" />
@@ -1011,15 +1006,15 @@ Corrélation=-0.32
 <section id="exercise-content">
 <p>Maintenant nous allons essayer de calculer la moyenne et la variance de l’échantillon en utilisant les données représentées par un histogramme.
 Notamment on peut calculer la moyenne de l’échantillon par la relation:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3f828884-cfa4-4bb6-b360-1cd4cf545e3c">
-<span class="eqno">(15)<a class="headerlink" href="#equation-3f828884-cfa4-4bb6-b360-1cd4cf545e3c" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-40f13a5b-037d-4896-92ab-92e69bd18e4d">
+<span class="eqno">(15)<a class="headerlink" href="#equation-40f13a5b-037d-4896-92ab-92e69bd18e4d" title="Permalink to this equation">#</a></span>\[\begin{equation}
     m = \sum _{i=0}^k f_i \frac{I_i + I_{i+1}}{2},
 \end{equation}\]</div>
 <p>avec <span class="math notranslate nohighlight">\(I_i\)</span> la bordure du bin <span class="math notranslate nohighlight">\(i\)</span> (<span class="math notranslate nohighlight">\(I_i\)</span> est la borne inférieure du bin <span class="math notranslate nohighlight">\(i\)</span> et <span class="math notranslate nohighlight">\(I_{i+1}\)</span> la borne supérieure du bin i) et <span class="math notranslate nohighlight">\(f_i\)</span> la fréquence du bin <span class="math notranslate nohighlight">\(i\)</span>.
 On prend <span class="math notranslate nohighlight">\(\frac{I_i + I_{i+1}}{2}\)</span> qui correspond au centre du bin <span class="math notranslate nohighlight">\(i\)</span>.
 De manière similaire, la variance se calcule grâce à la relation:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d7795303-70f5-4409-b1a4-8d6a14dd1c6d">
-<span class="eqno">(16)<a class="headerlink" href="#equation-d7795303-70f5-4409-b1a4-8d6a14dd1c6d" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-e47a7b3f-50c8-46a7-a674-6669228f6f74">
+<span class="eqno">(16)<a class="headerlink" href="#equation-e47a7b3f-50c8-46a7-a674-6669228f6f74" title="Permalink to this equation">#</a></span>\[\begin{equation}
     v = \sum _{i=0}^k f_i \left ( \frac{I_i + I_{i+1}}{2} - m\right) ^2.
 \end{equation}\]</div>
 <p>Lorsqu’on trace un histogramme avec <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> par exemple en utilisant:</p>
