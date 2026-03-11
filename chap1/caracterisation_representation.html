@@ -687,7 +687,7 @@ Faisons une représentation temporelle des données.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f9b4965c0d0&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f1ccc3de0a0&gt;]
 </pre></div>
 </div>
 <img alt="../_images/caracterisation_representation_2_1.png" src="../_images/caracterisation_representation_2_1.png" />
@@ -1011,15 +1011,15 @@ Corrélation=-0.32
 <section id="exercise-content">
 <p>Maintenant nous allons essayer de calculer la moyenne et la variance de l’échantillon en utilisant les données représentées par un histogramme.
 Notamment on peut calculer la moyenne de l’échantillon par la relation:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9e4f3427-437a-4738-b78b-9635ac1c4b00">
-<span class="eqno">(15)<a class="headerlink" href="#equation-9e4f3427-437a-4738-b78b-9635ac1c4b00" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-00eb183d-af40-4e7f-a895-3f9838b15bd2">
+<span class="eqno">(15)<a class="headerlink" href="#equation-00eb183d-af40-4e7f-a895-3f9838b15bd2" title="Permalink to this equation">#</a></span>\[\begin{equation}
     m = \sum _{i=0}^k f_i \frac{I_i + I_{i+1}}{2},
 \end{equation}\]</div>
 <p>avec <span class="math notranslate nohighlight">\(I_i\)</span> la bordure du bin <span class="math notranslate nohighlight">\(i\)</span> (<span class="math notranslate nohighlight">\(I_i\)</span> est la borne inférieure du bin <span class="math notranslate nohighlight">\(i\)</span> et <span class="math notranslate nohighlight">\(I_{i+1}\)</span> la borne supérieure du bin i) et <span class="math notranslate nohighlight">\(f_i\)</span> la fréquence du bin <span class="math notranslate nohighlight">\(i\)</span>.
 On prend <span class="math notranslate nohighlight">\(\frac{I_i + I_{i+1}}{2}\)</span> qui correspond au centre du bin <span class="math notranslate nohighlight">\(i\)</span>.
 De manière similaire, la variance se calcule grâce à la relation:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7bd1bd18-febd-4f0a-8548-64137c9bcce5">
-<span class="eqno">(16)<a class="headerlink" href="#equation-7bd1bd18-febd-4f0a-8548-64137c9bcce5" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-14f03a91-cd9c-4d8b-b32f-cc676aefbc1e">
+<span class="eqno">(16)<a class="headerlink" href="#equation-14f03a91-cd9c-4d8b-b32f-cc676aefbc1e" title="Permalink to this equation">#</a></span>\[\begin{equation}
     v = \sum _{i=0}^k f_i \left ( \frac{I_i + I_{i+1}}{2} - m\right) ^2.
 \end{equation}\]</div>
 <p>Lorsqu’on trace un histogramme avec <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> par exemple en utilisant:</p>
