@@ -184,7 +184,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chap2/erreur.html">
-     Notion d’erreur sur une mesure
+     Notion d’incertitude de mesure
     </a>
    </li>
   </ul>
@@ -663,7 +663,7 @@ vitesse = 2.98 +/- 0.03 [m⋅s^-1]
 </div>
 <p>La variable <code class="docutils literal notranslate"><span class="pre">v</span></code> a plusieurs attributs utiles, comme le calcul de la moyenne <code class="docutils literal notranslate"><span class="pre">mean</span></code> ou de l’erreur sur la moyenne <code class="docutils literal notranslate"><span class="pre">error_on_mean</span></code> comme défini par l’équation <a class="reference internal" href="../chap2/erreur.html#equation-erreur-moyenne">(54)</a>.
 L’affichage de la variable par <code class="docutils literal notranslate"><span class="pre">print</span></code> montre la valeur moyenne de cette série de mesures ainsi que l’erreur sur cette moyenne.</p>
-<p>On peut utiliser cet outil pour faire des calculs de propagation d’erreurs (voir la Section <a class="reference internal" href="../chap2/erreur.html#content-propagation-erreurs"><span class="std std-ref">Propagation des erreurs</span></a>).
+<p>On peut utiliser cet outil pour faire des calculs de propagation d’erreurs (voir la Section <a class="reference internal" href="../chap2/erreur.html#content-propagation-erreurs"><span class="std std-ref">Propagation des incertitudes</span></a>).
 Par exemple, si on mesure deux masses <span class="math notranslate nohighlight">\(m_1\)</span> et <span class="math notranslate nohighlight">\(m_2\)</span> à plusieurs reprises, on peut en déduire l’erreur sur la somme de ces deux masses <span class="math notranslate nohighlight">\(M = m1+m_2\)</span>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -728,7 +728,7 @@ Dans ce cas, QExPy permet de faire cela aussi:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Masse totale = 7.232 +/- 0.359 [kg]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Masse totale = 7.232 +/- 0.360 [kg]
 </pre></div>
 </div>
 </div>
@@ -819,7 +819,7 @@ Correlation Matrix:
 [[ 1.    -0.999]
  [-0.999  1.   ]]
 
-chi2/ndof = 1.66/3
+chi2/ndof = 1.61/3
 
 --------------- End Fit Results -----------------
 </pre></div>
