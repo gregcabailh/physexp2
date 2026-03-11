@@ -247,11 +247,6 @@ const thebe_selector_output = ".output, .cell_output"
      Lecture et écriture de fichiers
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../appendix/modules_utiles.html">
-     Modules utiles
-    </a>
-   </li>
   </ul>
  </li>
 </ul>
@@ -420,8 +415,8 @@ title="Print to PDF"
   <section class="tex2jax_ignore mathjax_ignore" id="ajustement-avec-des-donnees-sans-erreurs">
 <span id="content-fit-no-error"></span><h1>Ajustement avec des données sans erreurs<a class="headerlink" href="#ajustement-avec-des-donnees-sans-erreurs" title="Permalink to this headline">#</a></h1>
 <p>S’il s’agit de réduire l’écart entre <span class="math notranslate nohighlight">\(N\)</span> points de données <span class="math notranslate nohighlight">\(\left\{y_i\right\}\)</span> obtenus pour des valeurs <span class="math notranslate nohighlight">\(\left\{x_i\right\}\)</span> et le modèle <span class="math notranslate nohighlight">\(f\)</span> évalué au valeurs <span class="math notranslate nohighlight">\(\left\{x_i\right\}\)</span>, une quantité possible <a class="footnote-reference brackets" href="#excel" id="id1">1</a> est:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f8d226c3-4325-434f-beea-be034e723c6a">
-<span class="eqno">(67)<a class="headerlink" href="#equation-f8d226c3-4325-434f-beea-be034e723c6a" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-554a228f-51e6-46c2-b9f2-5cfb12e2b75f">
+<span class="eqno">(67)<a class="headerlink" href="#equation-554a228f-51e6-46c2-b9f2-5cfb12e2b75f" title="Permalink to this equation">#</a></span>\[\begin{equation}
     R^2 =  1- \frac{\sum _{i=1}^N\left(f(x_i; \alpha,\beta,...) - y_i\right)^2}{\sum _{i=1}^N\left(\bar{y}-y_i\right)^2},
 \end{equation}\]</div>
 <p>où <span class="math notranslate nohighlight">\(\bar{y}\)</span> est la moyenne des mesures <span class="math notranslate nohighlight">\(\left\{y_i\right\}\)</span>.
@@ -476,13 +471,13 @@ La valeur de <span class="math notranslate nohighlight">\(R^2\)</span> obtenue p
 </tbody>
 </table>
 <p>Il s’agit de paires de deux mesures <span class="math notranslate nohighlight">\(x_i\)</span> et <span class="math notranslate nohighlight">\(y_i\)</span> reliées par la relation:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-16d394ef-d24d-4e8c-81b9-3e2c315f1dda">
-<span class="eqno">(68)<a class="headerlink" href="#equation-16d394ef-d24d-4e8c-81b9-3e2c315f1dda" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-55bf3353-9465-4a65-b636-7ea05b8d510d">
+<span class="eqno">(68)<a class="headerlink" href="#equation-55bf3353-9465-4a65-b636-7ea05b8d510d" title="Permalink to this equation">#</a></span>\[\begin{equation}
     y_i = a\times x_i + b.
 \end{equation}\]</div>
 <p>Le coefficient de détermination que l’on va minimiser vaut:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-cf8fd28d-0d20-4e34-9152-6fac8d8d944a">
-<span class="eqno">(69)<a class="headerlink" href="#equation-cf8fd28d-0d20-4e34-9152-6fac8d8d944a" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-edef787b-e9c1-4f5b-8123-8f1f08785b93">
+<span class="eqno">(69)<a class="headerlink" href="#equation-edef787b-e9c1-4f5b-8123-8f1f08785b93" title="Permalink to this equation">#</a></span>\[\begin{equation}
     R^2 =  1- \frac{\sum _{i=1}^N\left(a\times x_i+b - y_i\right)^2}{\sum _{i=1}^N\left(\bar{y}-y_i\right)^2}.
 \end{equation}\]</div>
 <p>Le graphique ci-dessus montre que le modèle  s’ajuste bien aux données; le coefficient de détermination <span class="math notranslate nohighlight">\(R^2\)</span> obtenu vaut 0.96.</p>

@@ -247,11 +247,6 @@ const thebe_selector_output = ".output, .cell_output"
      Lecture et écriture de fichiers
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../appendix/modules_utiles.html">
-     Modules utiles
-    </a>
-   </li>
   </ul>
  </li>
 </ul>
@@ -638,7 +633,7 @@ Le tableau ci-dessous montre une partie des données météorologiques relevée 
 <section id="representation-graphique">
 <h2>Représentation graphique<a class="headerlink" href="#representation-graphique" title="Permalink to this headline">#</a></h2>
 <p>Une première façon simple consiste à représenter des données sous forme de graphique.
-On pourra consulter la section <a class="reference internal" href="../appendix/modules_utiles.html#content-matplotlib"><span class="std std-ref">Matplotlib</span></a> pour des exemples de code pour créer les graphiques suivants.
+On pourra consulter la section <span class="xref myst"></span> pour des exemples de code pour créer les graphiques suivants.
 Faisons une représentation temporelle des données.</p>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
@@ -682,7 +677,7 @@ Faisons une représentation temporelle des données.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fa7064a0130&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fcb605bf040&gt;]
 </pre></div>
 </div>
 <img alt="../_images/caracterisation_representation_2_1.png" src="../_images/caracterisation_representation_2_1.png" />
@@ -1006,15 +1001,15 @@ Corrélation=-0.32
 <section id="exercise-content">
 <p>Maintenant nous allons essayer de calculer la moyenne et la variance de l’échantillon en utilisant les données représentées par un histogramme.
 Notamment on peut calculer la moyenne de l’échantillon par la relation:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d272533d-ce7d-48b9-aa50-f78c36a499b1">
-<span class="eqno">(15)<a class="headerlink" href="#equation-d272533d-ce7d-48b9-aa50-f78c36a499b1" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-1566d7cc-9c29-451c-a574-4f415790dd06">
+<span class="eqno">(15)<a class="headerlink" href="#equation-1566d7cc-9c29-451c-a574-4f415790dd06" title="Permalink to this equation">#</a></span>\[\begin{equation}
     m = \sum _{i=0}^k f_i \frac{I_i + I_{i+1}}{2},
 \end{equation}\]</div>
 <p>avec <span class="math notranslate nohighlight">\(I_i\)</span> la bordure du bin <span class="math notranslate nohighlight">\(i\)</span> (<span class="math notranslate nohighlight">\(I_i\)</span> est la borne inférieure du bin <span class="math notranslate nohighlight">\(i\)</span> et <span class="math notranslate nohighlight">\(I_{i+1}\)</span> la borne supérieure du bin i) et <span class="math notranslate nohighlight">\(f_i\)</span> la fréquence du bin <span class="math notranslate nohighlight">\(i\)</span>.
 On prend <span class="math notranslate nohighlight">\(\frac{I_i + I_{i+1}}{2}\)</span> qui correspond au centre du bin <span class="math notranslate nohighlight">\(i\)</span>.
 De manière similaire, la variance se calcule grâce à la relation:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8051e85e-82e5-44ab-bc13-7b1cb7e148a1">
-<span class="eqno">(16)<a class="headerlink" href="#equation-8051e85e-82e5-44ab-bc13-7b1cb7e148a1" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-04375eaa-65d4-4f2a-a46b-aea35b2a1543">
+<span class="eqno">(16)<a class="headerlink" href="#equation-04375eaa-65d4-4f2a-a46b-aea35b2a1543" title="Permalink to this equation">#</a></span>\[\begin{equation}
     v = \sum _{i=0}^k f_i \left ( \frac{I_i + I_{i+1}}{2} - m\right) ^2.
 \end{equation}\]</div>
 <p>Lorsqu’on trace un histogramme avec <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> par exemple en utilisant:</p>
