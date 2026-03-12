@@ -659,8 +659,8 @@ Ecart-type = 2.402
 <h2>Extraction des meilleurs paramètres<a class="headerlink" href="#extraction-des-meilleurs-parametres" title="Permalink to this headline">#</a></h2>
 <p>Trouver les meilleurs paramètres d’un modèle selon les données collectées revient à maximiser la vraisemblance ou bien minimiser le <span class="math notranslate nohighlight">\(\chi ^2\)</span>.
 Cela peut se faire numériquement, par exemple, avec le module <code class="docutils literal notranslate"><span class="pre">scipy.optimize</span></code> ou bien analytiquement: en généralisant pour des paramètres <span class="math notranslate nohighlight">\(\vec{\theta}\)</span>, le système d’équations à résoudre est <a class="footnote-reference brackets" href="#minchi2" id="id2">2</a>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-835520f7-5c46-4c51-bee5-86231928e90a">
-<span class="eqno">(73)<a class="headerlink" href="#equation-835520f7-5c46-4c51-bee5-86231928e90a" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-856b02c9-6ac6-4658-9b42-52064b311935">
+<span class="eqno">(73)<a class="headerlink" href="#equation-856b02c9-6ac6-4658-9b42-52064b311935" title="Permalink to this equation">#</a></span>\[\begin{equation}
   \left.\frac{\partial \chi ^2}{\partial \vec{\theta}}\right\vert_{\vec{\theta}=\hat{\vec{\theta}}} = 0.
 \end{equation}\]</div>
 <!-- % Pour certains modèles, il est possible de trouver une expression analytique des meilleurs paramètres utilisant les valeurs des données. -->
@@ -703,7 +703,7 @@ En général, c’est un travail très complexe car la fonction de vraisemblance
 <p>En l’absence de corrélation entre les paramètres ajustés, l’incertitude à <span class="math notranslate nohighlight">\(1\sigma\)</span> sur un paramètre s’obtient empiriquement en trouvant l’excursion <span class="math notranslate nohighlight">\(\Delta\)</span> de la valeur de ce paramètre telle que le <span class="math notranslate nohighlight">\(\chi^2\)</span> augmente d’une unité, les autres paramètres étant fixés à la valeur optimale (qui minimise le <span class="math notranslate nohighlight">\(\chi^2\)</span>).
 Si le coefficient de corrélation <span class="math notranslate nohighlight">\(\rho\)</span> entre les paramètres n’est pas nul, cette excursion vaut <span class="math notranslate nohighlight">\(\Delta = \sigma \sqrt{1-\rho^2}\)</span>. Pour un ajustement linéaire, la corrélation entre la pente <span class="math notranslate nohighlight">\(a\)</span> et le piédestal <span class="math notranslate nohighlight">\(b\)</span> est nulle si la moyenne des abscisses pondérées par les variances inverses est nulle. On peut toujours s’y ramener par un changement d’origine des abscisses.</p>
 <p><strong>Application aux paramètres d’un ajustement linéaire</strong></p>
-<p>Dans le cas simple d’un ajustement linéaire <span class="math notranslate nohighlight">\(y=ax+b\)</span>, les incertitudes sur les paramètres <span class="math notranslate nohighlight">\(a\)</span> et <span class="math notranslate nohighlight">\(b\)</span> sont définis par:</p>
+<p>Dans le cas simple d’un ajustement linéaire <span class="math notranslate nohighlight">\(y=ax+b\)</span>, les incertitudes sur les paramètres <span class="math notranslate nohighlight">\(a\)</span> et <span class="math notranslate nohighlight">\(b\)</span> sont définies par:</p>
 <div class="math notranslate nohighlight" id="equation-err-a">
 <span class="eqno">(76)<a class="headerlink" href="#equation-err-a" title="Permalink to this equation">#</a></span>\[
 \Delta a \,\mathrm{tel\,que\,}\, \chi^{2}(\hat{a}+\Delta a, \hat{b})=\chi^{2}(\hat{a}-\Delta a, \hat{b})=\chi_{\min }^{2}+1,
@@ -811,14 +811,14 @@ De par sa définition <a class="reference internal" href="#equation-err-a">(76)<
 <span id="content-chi2-histo"></span><h2>Ajustement d’un histogramme<a class="headerlink" href="#ajustement-dun-histogramme" title="Permalink to this headline">#</a></h2>
 <p>Lorsque les données suivant une certaine loi de probabilité <span class="math notranslate nohighlight">\(f(x;\vec{\theta})\)</span> sont rangées dans un histogramme, il est possible d’estimer les paramètres de cette densité de probabilité.
 Pour cela on construit la fonction de vraisemblance <a class="reference internal" href="#equation-vraisemblance">(70)</a> en supposant que le contenu de chaque classe <span class="math notranslate nohighlight">\(N_i\)</span> est distribué selon une loi poissonienne autour de la valeur vraie <span class="math notranslate nohighlight">\(f(x_i;\vec{\theta})\times \delta x\)</span> où <span class="math notranslate nohighlight">\(x_i\)</span> représente le centre de la classe et <span class="math notranslate nohighlight">\(\delta x\)</span> la largeur de la classe: on a alors</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5683b979-528d-4362-a3da-38e993d44018">
-<span class="eqno">(79)<a class="headerlink" href="#equation-5683b979-528d-4362-a3da-38e993d44018" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-8da8363e-0edc-400a-b1fd-dd02ecb61126">
+<span class="eqno">(79)<a class="headerlink" href="#equation-8da8363e-0edc-400a-b1fd-dd02ecb61126" title="Permalink to this equation">#</a></span>\[\begin{equation}
   \mathcal{L}(\vec{\theta}) = \prod _i \frac{e^{-f(x_i;\vec{\theta}) \delta x}\left(f(x_i;\vec{\theta}) \delta x\right)^{N_i}}{N_i !}.
 \end{equation}\]</div>
 <p>Dans le cas où le nombre de coups dans chaque classe est grand (<span class="math notranslate nohighlight">\(N_i&gt;25\)</span>), on peut faire l’approximation de la densité de Poisson par une loi normale d’écart type <span class="math notranslate nohighlight">\(\sigma _i = \sqrt{N_i}\)</span>.
 La maximisation de la fonction de vraisemblance est alors la minimisation du <span class="math notranslate nohighlight">\(\chi ^2\)</span>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-fdda81cd-b736-4424-8be6-a0434389cb7b">
-<span class="eqno">(80)<a class="headerlink" href="#equation-fdda81cd-b736-4424-8be6-a0434389cb7b" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-4f9cc529-d6ec-4c22-b298-3e77c9e0c047">
+<span class="eqno">(80)<a class="headerlink" href="#equation-4f9cc529-d6ec-4c22-b298-3e77c9e0c047" title="Permalink to this equation">#</a></span>\[\begin{equation}
     \chi ^2 = \sum _i\frac{\left(N_i - f(x_i;\vec{\theta})\delta x\right)^2}{N_i}.
 \end{equation}\]</div>
 <hr class="footnotes docutils" />
